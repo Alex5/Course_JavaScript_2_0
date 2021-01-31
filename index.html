@@ -8,6 +8,7 @@
     <title>JavaScript 2.0 - Курс Алекса Лущенко</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="prism.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-spy="scroll" data-target="#navbar">
@@ -15,7 +16,7 @@
     <div class="leftSide">
         <div class="col-3 fixed-top fs-6">
             <nav id="navbar" class="navbar navbar-light bg-light p-3">
-                <a class="nav-link fw-bold text-uppercase">JavaScript 2.0 Курс Александра Лущенко</a>
+                <div class="nav-link fw-bold text-uppercase badge bg-dark text-wrap mb-5">JavaScript 2.0 Курс Александра Лущенко</div>
                 <nav class="nav nav-pills flex-column">
                     <a class="nav-link" href="#list-item-1">Урок 1. Стартуем и пишем первую программу</a>
                     <a class="nav-link" href="#list-item-2">Урок 2. ОСНОВЫ ВВОДА ДАННЫХ</a>
@@ -247,11 +248,26 @@
                 <h5>УРОК 4. РАБОТАЕМ С ФОРМАМИ: INPUT, RANGE, TEXTAREA, CHECKBOX..</h5>
                 <p>Код урока:</p>
                 <div class="border p-3 mb-3">
-                    <div class="mb-3">
-                        <code class="lessonCode">
-
-                        </code>
+                    <div class="accordion mb-3" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Посмотреть код
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0">
+                                    <pre>
+                                        <code class="lesson4Code language-js"></code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                     <div class="sticky-top bg-light p-3">
                         <p>Выбранное значение:</p>
                         <div class="alert alert-info range-out " role="alert">
@@ -283,7 +299,8 @@
                     <div class="border p-3 mb-3">
                         <p>Checkbox</p>
                         <div class="form-check">
-                            <input class="form-check-input checkbox-lesson-4" type="checkbox" value="" id="flexCheckDefault">
+                            <input class="form-check-input checkbox-lesson-4" type="checkbox" value=""
+                                   id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Default checkbox
                             </label>
@@ -298,22 +315,23 @@
                         </div>
                         <div class="card-body">
                             <div class="form-floating">
-                                <textarea class="form-control textarea-lesson4" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <textarea class="form-control textarea-lesson4" placeholder="Leave a comment here"
+                                          id="floatingTextarea"></textarea>
                                 <label for="floatingTextarea">Comments</label>
                             </div>
                         </div>
-                       <div class="card-footer">
-                           <button class="btn border btn5-lesson-4">
-                               Выбрать
-                           </button>
-                       </div>
+                        <div class="card-footer">
+                            <button class="btn border btn5-lesson-4">
+                                Выбрать
+                            </button>
+                        </div>
 
                     </div>
 
                     <div class="range-out2">
 
                     </div>
-                        <button class="btn btn-outline" id="deleteAlert">Закрыть алерт</button>
+                    <button class="btn btn-outline" id="deleteAlert">Закрыть алерт</button>
                 </div>
                 <h5>Домашка:</h5>
                 <div class="border p-3 mb-3">
@@ -389,6 +407,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+<script src="prism.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

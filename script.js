@@ -187,6 +187,7 @@ const lesson4 = () => {
     const textAreaLesson4 = document.querySelector('.textarea-lesson4')
     const btn5lesson4 = document.querySelector('.btn5-lesson-4')
     const alertCloseBtn = document.querySelector('#deleteAlert')
+    const lesson4code = document.querySelector('.lesson4Code')
 
     btn5lesson4.onclick = () => {
         if (textAreaLesson4.value !== '') {
@@ -205,6 +206,7 @@ const lesson4 = () => {
     }
 
     alertCloseBtn.onclick = removeAlert
+    lesson4code.innerHTML = lesson4
 
     //form
 
