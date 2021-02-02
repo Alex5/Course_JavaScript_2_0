@@ -210,10 +210,51 @@ const lesson4 = () => {
 
     //form
 
+    //home work
 
+    //task 1
+
+    const btn1lesson4 = document.querySelector('.btn1lesson4')
+    const task1title = document.querySelector('.task1title')
+
+    btn1lesson4.onclick = () => {
+        alert(task1title.innerText)
+    }
+
+    //task 2
+
+    const input1lesson4 = document.querySelector('.input1lesson4')
+
+    input1lesson4.onclick = () => alert('Номер задачи: 2')
+
+    //task 3
+
+    const p3Lesson4Input = document.querySelector('.p3Lesson4Input')
+    p3Lesson4Input.onclick = () => alert(3)
 }
 
 lesson4()
+
+//lesson 5 циклы while, for, do while
+
+const lesson5 = () => {
+    const div = document.querySelectorAll('.lesson5div')
+    const div2 = document.getElementsByClassName('lesson5div')
+    const div3 = document.getElementsByTagName('div')
+    console.log(div3)
+
+    for (let i = 0; i < div.length; i++) {
+        div[i].style.background = '#b6d1ff'
+        console.log(i)
+    }
+
+    for (let i = 0; i < div2.length; i++) {
+        div2[i].style.border = '3px solid black'
+        console.log(i)
+    }
+}
+
+lesson5()
 
 
 

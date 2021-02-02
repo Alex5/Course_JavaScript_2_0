@@ -5,405 +5,451 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScript 2.0 - Курс Алекса Лущенко</title>
+    <title>JavaScript 2.0 - Методичка</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
     <link rel="stylesheet" href="prism.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body data-spy="scroll" data-target="#navbar">
-<div class="row">
-    <div class="leftSide">
-        <div class="col-3 fixed-top fs-6">
-            <nav id="navbar" class="navbar navbar-light bg-light p-3">
-                <div class="nav-link fw-bold text-uppercase badge bg-dark text-wrap mb-5">JavaScript 2.0 Курс Александра Лущенко</div>
-                <nav class="nav nav-pills flex-column">
-                    <a class="nav-link" href="#list-item-1">Урок 1. Стартуем и пишем первую программу</a>
-                    <a class="nav-link" href="#list-item-2">Урок 2. ОСНОВЫ ВВОДА ДАННЫХ</a>
-                    <nav class="nav nav-pills flex-column">
-                        <a class="nav-link ms-3 my-1" href="#list-item-2-1">Код</a>
-                        <a class="nav-link ms-3 my-1" href="#list-item-2-2">Задачи</a>
-                    </nav>
-                    <a class="nav-link" href="#list-item-3">УРОК 3. ОПЕРАТОР IF, ELSE, SWITCH CASE - ВЫБОР В
-                        JAVASCRIPT</a>
-                    <a class="nav-link" href="#list-item-4">УРОК 4. РАБОТАЕМ С ФОРМАМИ: INPUT, RANGE, TEXTAREA,
-                        CHECKBOX</a>
-                    <a class="nav-link" href="#list-item-1">Item 5</a>
-                    <a class="nav-link" href="#list-item-2">Item 6</a>
-                    <a class="nav-link" href="#list-item-3">Item 7</a>
-                    <a class="nav-link" href="#list-item-4">Item 8</a>
-                </nav>
-            </nav>
+<nav class="navbar navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand">JavaScript методичка</a>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Поиск</button>
+        </form>
+    </div>
+</nav>
+<div class="container root">
+    <div id="list-item-1" class="lessonOne">
+        <h5>УРОК 1. Стартуем и пишем первую программу</h5>
+        <h4 id="item-1-1">Вывод на экран:</h4>
+        <div class="border p-3 mb-3">
 
+            <code>document.getElementById('out').innerHTML = 'Hello'</code>
+            <h2 id="out"></h2>
+        </div>
+        <h4 id="item-1-2">Замена текста:</h4>
+        <div class="border p-3 mb-3">
+            <code>const editDiv = () => { document.querySelector('#one').innerHTML = "Поменялся" }</code>
+
+            <p id="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at est eum, odio
+                officiis
+                pariatur
+                qui
+                quia
+                tempora vero? Aliquid beatae eius quo sequi! Ad dicta exercitationem nam officiis
+                tenetur.</p>
+            <button type="button" class="btn btn-primary" onclick="editText()">Поменять текст</button>
+        </div>
+
+    </div>
+    <div id="list-item-2" class="lessonTwo">
+        <h5>УРОК 2. ОСНОВЫ ВВОДА ДАННЫХ</h5>
+        <p id="list-item-2-1">Код урока:</p>
+        <div class="border p-3 mb-3">
+            <div class="mb-3">
+                <code>
+                    const inputIn = document.querySelector('.input-in') // input<br>
+                    const button = document.querySelector('.button-in') // input<br>
+                    const div = document.querySelector('.out')<br>
+                    <br>
+                    button.onclick = () => {<br>
+                    // console.log(inputIn.value)<br>
+                    const value = +inputIn.value // перевести в число +<br>
+                    console.log(value)<br>
+                    div.innerHTML = value<br>
+                    inputIn.value = '';<br>
+                    }
+                </code>
+            </div>
+            <div class="form-floating d-flex  ">
+                <input type="number" class="form-control input-in" id="floatingInput"
+                       placeholder="name@example.com">
+                <label for="floatingInput">Введите число</label>
+                <button class="btn btn-primary button-in" type="button">Go</button>
+            </div>
+
+            <div class="out">
+
+            </div>
+        </div>
+        <h5 id="list-item-2-2">Домашка:</h5>
+        <div class="border p-3 mb-3">
+            <p>Задача 1 (Создайте две переменные a = 7 и b = 9. Выведите в консоль результа умножения a на
+                b.)</p>
+            <p>Решение:</p>
+            <code>
+                const a = 7 <br>
+                const b = 9 <br>
+                console.log(a * b) <br>
+            </code>
+        </div>
+        <div class="border p-3 mb-3">
+            <p>Задача 2 ( Создайте две переменные c = 7 и d = 9. Выведите на страницу результат деления c на
+                d.
+                )</p>
+            <p>Решение:</p>
+            <code>
+                const c = 7 <br>
+                const d = 9 <br>
+                const taskTwoResult = c * d <br>
+                const taskTwo = document.querySelector('.taskTwo') <br>
+                taskTwo.innerHTML = taskTwoResult <br>
+            </code>
+            <p>Результат:</p>
+            <div class="taskTwo alert alert-success">
+
+            </div>
+        </div>
+        <div class="border p-3 mb-3">
+            <p>Задача 3 ( Создайте две переменные e = 3 и f = 5. Выведите на страницу результат сложения e +
+                f..
+                )</p>
+            <p>Решение:</p>
+            <code>
+                const e = 3 <br>
+                const f = 5 <br>
+                const taskThreeResult = e + f <br>
+                const taskThree = document.querySelector('.taskThree') <br>
+                taskThree.innerHTML = taskThreeResult <br>
+            </code>
+            <p>Результат:</p>
+            <div class="taskThree alert alert-success">
+
+            </div>
         </div>
     </div>
-    <div class="d-flex justify-content-end" data-spy="scroll" data-target="#navbar">
-        <div class="col-9 rightSide p-5">
-            <div id="list-item-1">
-                <h5>УРОК 1. Стартуем и пишем первую программу</h5>
-                <h4 id="item-1-1">Вывод на экран:</h4>
-                <div class="border p-3 mb-3">
+    <div id="list-item-3" class="lessonThree">
+        <h5>УРОК 3. ОПЕРАТОР IF, ELSE, SWITCH CASE - ВЫБОР В JAVASCRIPT</h5>
+        <p id="list-item-3-1">Код урока:</p>
+        <div class="border p-3 mb-3">
+            <div class="mb-3">
+                <code>
+                    // const a = 6 <br>
+                    // // <= >= == != <br>
+                    // if (a !== 19) { <br>
+                    // console.log('Yes') <br>
+                    // } else { <br>
+                    // console.log("else") <br>
+                    // } <br>
+                    const button = document.querySelector('.btn-lesson-3') <br>
+                    const input = document.querySelector('.input-lesson-3') <br>
 
-                    <code>document.getElementById('out').innerHTML = 'Hello'</code>
-                    <h2 id="out"></h2>
-                </div>
-                <h4 id="item-1-2">Замена текста:</h4>
-                <div class="border p-3 mb-3">
-                    <code>const editDiv = () => { document.querySelector('#one').innerHTML = "Поменялся" }</code>
-
-                    <p id="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at est eum, odio
-                        officiis
-                        pariatur
-                        qui
-                        quia
-                        tempora vero? Aliquid beatae eius quo sequi! Ad dicta exercitationem nam officiis tenetur.</p>
-                    <button type="button" class="btn btn-primary" onclick="editText()">Поменять текст</button>
-                </div>
-
+                    button.onclick = () => { <br>
+                    let age = +input.value <br>
+                    // if (age >= 16 && age < 60) { <br>
+                    // alert('Велком ту фемели') <br>
+                    // } else if (age > 60) { <br>
+                    // alert('Ты точно сюда?') <br>
+                    // } else { <br>
+                    // alert('Ты не пройдёшь!') <br>
+                    // } <br>
+                    switch (age) { <br>
+                    case 16: <br>
+                    alert("Всё хорошо") <br>
+                    break <br>
+                    case 15: <br>
+                    alert("Пока рановато :((( Подожди ещё год") <br>
+                    break <br>
+                    default: <br>
+                    alert("Отлично") <br>
+                    }
+                    }
+                </code>
             </div>
-            <div id="list-item-2">
-                <h5>УРОК 2. ОСНОВЫ ВВОДА ДАННЫХ</h5>
-                <p id="list-item-2-1">Код урока:</p>
-                <div class="border p-3 mb-3">
-                    <div class="mb-3">
-                        <code>
-                            const inputIn = document.querySelector('.input-in') // input<br>
-                            const button = document.querySelector('.button-in') // input<br>
-                            const div = document.querySelector('.out')<br>
-                            <br>
-                            button.onclick = () => {<br>
-                            // console.log(inputIn.value)<br>
-                            const value = +inputIn.value // перевести в число +<br>
-                            console.log(value)<br>
-                            div.innerHTML = value<br>
-                            inputIn.value = '';<br>
-                            }
-                        </code>
-                    </div>
-                    <div class="form-floating d-flex  ">
-                        <input type="number" class="form-control input-in" id="floatingInput"
-                               placeholder="name@example.com">
-                        <label for="floatingInput">Введите число</label>
-                        <button class="btn btn-primary button-in" type="button">Go</button>
-                    </div>
+            <div>
+                <label class="mr-3">Введите возраст</label>
+                <input class="input-lesson-3" type="text">
+                <button class="btn btn-primary btn-lesson-3" type="button">ok</button>
+            </div>
+        </div>
+        <h5 id="list-item-3-2">Домашка:</h5>
+        <div class="border p-3 mb-3">
+            <p>Задача 1 (При нажатии кнопки b-1 срабатывает функция f1. Функция должна прочитать содержимое
+                i-1
+                и
+                сравнить его с числом 4 (сравнение ==). Результат сравнения - true или false выведите в
+                out-1.)</p>
+            <p>Решение:</p>
+            <code>
+                const button1 = document.querySelector('.b-1') <br>
+                const out = document.querySelector('.out-1') <br>
+                const input3 = document.querySelector('.prep-input-3') <br>
+                button1.onclick = () => { <br>
+                let i = input3.value <br>
+                if (i == 4) { <br>
+                out.innerHTML = "true" <br>
+                } else { <br>
+                out.innerHTML = "false" <br>
+                } <br>
+                } <br>
+            </code>
+            <div>
+                <p>Результат:</p>
+                <input type="number" class="prep-input-3">
+                <button type="button" class="b-1">b-1</button>
+                <div class="out-1">
 
-                    <div class="out">
-
-                    </div>
-                </div>
-                <h5 id="list-item-2-2">Домашка:</h5>
-                <div class="border p-3 mb-3">
-                    <p>Задача 1 (Создайте две переменные a = 7 и b = 9. Выведите в консоль результа умножения a на
-                        b.)</p>
-                    <p>Решение:</p>
-                    <code>
-                        const a = 7 <br>
-                        const b = 9 <br>
-                        console.log(a * b) <br>
-                    </code>
-                </div>
-                <div class="border p-3 mb-3">
-                    <p>Задача 2 ( Создайте две переменные c = 7 и d = 9. Выведите на страницу результат деления c на d.
-                        )</p>
-                    <p>Решение:</p>
-                    <code>
-                        const c = 7 <br>
-                        const d = 9 <br>
-                        const taskTwoResult = c * d <br>
-                        const taskTwo = document.querySelector('.taskTwo') <br>
-                        taskTwo.innerHTML = taskTwoResult <br>
-                    </code>
-                    <p>Результат:</p>
-                    <div class="taskTwo alert alert-success">
-
-                    </div>
-                </div>
-                <div class="border p-3 mb-3">
-                    <p>Задача 3 ( Создайте две переменные e = 3 и f = 5. Выведите на страницу результат сложения e + f..
-                        )</p>
-                    <p>Решение:</p>
-                    <code>
-                        const e = 3 <br>
-                        const f = 5 <br>
-                        const taskThreeResult = e + f <br>
-                        const taskThree = document.querySelector('.taskThree') <br>
-                        taskThree.innerHTML = taskThreeResult <br>
-                    </code>
-                    <p>Результат:</p>
-                    <div class="taskThree alert alert-success">
-
-                    </div>
                 </div>
             </div>
-            <div id="list-item-3" class="lessonTwo">
-                <h5>УРОК 3. ОПЕРАТОР IF, ELSE, SWITCH CASE - ВЫБОР В JAVASCRIPT</h5>
-                <p>Код урока:</p>
-                <div class="border p-3 mb-3">
-                    <div class="mb-3">
-                        <code>
-                            // const a = 6 <br>
-                            // // <= >= == != <br>
-                            // if (a !== 19) { <br>
-                            // console.log('Yes') <br>
-                            // } else { <br>
-                            // console.log("else") <br>
-                            // } <br>
-                            const button = document.querySelector('.btn-lesson-3') <br>
-                            const input = document.querySelector('.input-lesson-3') <br>
+        </div>
+        <div class="border p-3 mb-3">
+            <p>Даны две переменные a21 и a22. При нажатии кнопки b-2, запускается функция f2. Функция должна
+                сравнить
+                переменные с помощью if else и вывести в out-2 число, которое больше. Вариант равенства
+                переменных не
+                рассматриваем. )</p>
+            <p>Решение:</p>
+            <code class="task2-lesson4">
+            </code>
+            <p>Результат:</p>
+            <button class="b-2">Запустить функцию f2</button>
+            <div class="out-2 alert alert-success">
 
-                            button.onclick = () => { <br>
-                            let age = +input.value <br>
-                            // if (age >= 16 && age < 60) { <br>
-                            // alert('Велком ту фемели') <br>
-                            // } else if (age > 60) { <br>
-                            // alert('Ты точно сюда?') <br>
-                            // } else { <br>
-                            // alert('Ты не пройдёшь!') <br>
-                            // } <br>
-                            switch (age) { <br>
-                            case 16: <br>
-                            alert("Всё хорошо") <br>
-                            break <br>
-                            case 15: <br>
-                            alert("Пока рановато :((( Подожди ещё год") <br>
-                            break <br>
-                            default: <br>
-                            alert("Отлично") <br>
-                            }
-                            }
-                        </code>
-                    </div>
-                    <div>
-                        <label class="mr-3">Введите возраст</label>
-                        <input class="input-lesson-3" type="text">
-                        <button class="btn btn-primary btn-lesson-3" type="button">ok</button>
-                    </div>
-                </div>
-                <h5>Домашка:</h5>
-                <div class="border p-3 mb-3">
-                    <p>Задача 1 (При нажатии кнопки b-1 срабатывает функция f1. Функция должна прочитать содержимое i-1
-                        и
-                        сравнить его с числом 4 (сравнение ==). Результат сравнения - true или false выведите в
-                        out-1.)</p>
-                    <p>Решение:</p>
-                    <code>
-                        const button1 = document.querySelector('.b-1') <br>
-                        const out = document.querySelector('.out-1') <br>
-                        const input3 = document.querySelector('.prep-input-3') <br>
-                        button1.onclick = () => { <br>
-                        let i = input3.value <br>
-                        if (i == 4) { <br>
-                        out.innerHTML = "true" <br>
-                        } else { <br>
-                        out.innerHTML = "false" <br>
-                        } <br>
-                        } <br>
-                    </code>
-                    <div>
-                        <p>Результат:</p>
-                        <input type="number" class="prep-input-3">
-                        <button type="button" class="b-1">b-1</button>
-                        <div class="out-1">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="border p-3 mb-3">
-                    <p>Даны две переменные a21 и a22. При нажатии кнопки b-2, запускается функция f2. Функция должна
-                        сравнить
-                        переменные с помощью if else и вывести в out-2 число, которое больше. Вариант равенства
-                        переменных не
-                        рассматриваем. )</p>
-                    <p>Решение:</p>
-                    <code class="task2-lesson4">
-                    </code>
-                    <p>Результат:</p>
-                    <button class="b-2">Запустить функцию f2</button>
-                    <div class="out-2 alert alert-success">
-
-                    </div>
-                </div>
-                <div class="border p-3 mb-3">
-                    <p>Даны 2 input - i-31 и i-32, оба - input[type=number]. При нажатии кнопки b-3 срабатывает функция
-                        f3.
-                        Функция должна прочитать содержимое i-31 и i-32 в переменные и сравнить их, вывести в out-3
-                        большее
-                        число.
-
-                        Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9 и 22, 5 и 111.</p>
-                    <p>Решение:</p>
-                    <div>
-                        <code class="code-3"></code>
-                    </div>
-                    <input class="i-31" type="number">
-                    <input class="i-32" type="number">
-                    <button type="button" class="btn btn-secondary b-3">Сравнить</button>
-                    <p>Результат:</p>
-                    <div class="out-3 alert alert-success">
-
-                    </div>
-                </div>
             </div>
-            <div id="list-item-4" class="lessonThree">
-                <h5>УРОК 4. РАБОТАЕМ С ФОРМАМИ: INPUT, RANGE, TEXTAREA, CHECKBOX..</h5>
-                <p>Код урока:</p>
-                <div class="border p-3 mb-3">
-                    <div class="accordion mb-3" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Посмотреть код
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body p-0">
-                                    <pre>
-                                        <code class="lesson4Code language-js"></code>
-                                    </pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        <div class="border p-3 mb-3">
+            <p>Даны 2 input - i-31 и i-32, оба - input[type=number]. При нажатии кнопки b-3 срабатывает
+                функция
+                f3.
+                Функция должна прочитать содержимое i-31 и i-32 в переменные и сравнить их, вывести в out-3
+                большее
+                число.
 
+                Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9 и 22, 5 и 111.</p>
+            <p>Решение:</p>
+            <div>
+                <code class="code-3"></code>
+            </div>
+            <input class="i-31" type="number">
+            <input class="i-32" type="number">
+            <button type="button" class="btn btn-secondary b-3">Сравнить</button>
+            <p>Результат:</p>
+            <div class="out-3 alert alert-success">
 
-                    <div class="sticky-top bg-light p-3">
-                        <p>Выбранное значение:</p>
-                        <div class="alert alert-info range-out " role="alert">
-
-                        </div>
-                    </div>
-                    <h5>HTML урока:</h5>
-                    <div class="border p-3">
-                        <p>Color picker</p>
-                        <div>
-                            <input class="input-lesson-4" type="color">
-                            <button class="btn border btn-lesson-4">Выбрать</button>
-                        </div>
-                    </div>
-                    <div class="border p-3">
-                        <p>Дата пикер</p>
-                        <div>
-                            <input class="date-lesson-4" type="date">
-                            <button class="btn border btn2-lesson-4">Выбрать</button>
-                        </div>
-                    </div>
-                    <div class="border p-3">
-                        <p>Range <span class="range-values badge bg-info text-light">0</span></p>
-                        <div>
-                            <input class="form-range range-lesson-4" type="range" min="0" max="200" value="0">
-                            <button class="btn border btn3-lesson-4">Выбрать</button>
-                        </div>
-                    </div>
-                    <div class="border p-3 mb-3">
-                        <p>Checkbox</p>
-                        <div class="form-check">
-                            <input class="form-check-input checkbox-lesson-4" type="checkbox" value=""
-                                   id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Default checkbox
-                            </label>
-                        </div>
-                        <button class="btn border btn4-lesson-4">
-                            Выбрать
+            </div>
+        </div>
+    </div>
+    <div id="list-item-4" class="lessonFour">
+        <h5>УРОК 4. РАБОТАЕМ С ФОРМАМИ: INPUT, RANGE, TEXTAREA, CHECKBOX..</h5>
+        <p id="list-item-4-1">Код урока:</p>
+        <div class="border p-3 mb-3">
+            <div class="accordion mb-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false"
+                                aria-controls="collapseOne">
+                            Посмотреть код
                         </button>
-                    </div>
-                    <div class="border">
-                        <div class="card-header">
-                            Text Area
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show"
+                         aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body p-0">
+                                        <pre>
+                                            <code class="lesson4Code language-js"></code>
+                                        </pre>
                         </div>
-                        <div class="card-body">
-                            <div class="form-floating">
-                                <textarea class="form-control textarea-lesson4" placeholder="Leave a comment here"
-                                          id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Comments</label>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn border btn5-lesson-4">
-                                Выбрать
-                            </button>
-                        </div>
-
-                    </div>
-
-                    <div class="range-out2">
-
-                    </div>
-                    <button class="btn btn-outline" id="deleteAlert">Закрыть алерт</button>
-                </div>
-                <h5>Домашка:</h5>
-                <div class="border p-3 mb-3">
-                    <p>Задача 1 (При нажатии кнопки b-1 срабатывает функция f1. Функция должна прочитать содержимое i-1
-                        и
-                        сравнить его с числом 4 (сравнение ==). Результат сравнения - true или false выведите в
-                        out-1.)</p>
-                    <p>Решение:</p>
-                    <code>
-                        const button1 = document.querySelector('.b-1') <br>
-                        const out = document.querySelector('.out-1') <br>
-                        const input3 = document.querySelector('.prep-input-3') <br>
-                        button1.onclick = () => { <br>
-                        let i = input3.value <br>
-                        if (i == 4) { <br>
-                        out.innerHTML = "true" <br>
-                        } else { <br>
-                        out.innerHTML = "false" <br>
-                        } <br>
-                        } <br>
-                    </code>
-                    <div>
-                        <p>Результат:</p>
-                        <input type="number" class="prep-input-3">
-                        <button type="button" class="b-1">b-1</button>
-                        <div class="out-1">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border p-3 mb-3">
-                    <p>Даны две переменные a21 и a22. При нажатии кнопки b-2, запускается функция f2. Функция должна
-                        сравнить
-                        переменные с помощью if else и вывести в out-2 число, которое больше. Вариант равенства
-                        переменных не
-                        рассматриваем. )</p>
-                    <p>Решение:</p>
-                    <code class="task2-lesson4">
-                    </code>
-                    <p>Результат:</p>
-                    <button class="b-2">Запустить функцию f2</button>
-                    <div class="out-2 alert alert-success">
-
-                    </div>
-                </div>
-                <div class="border p-3 mb-3">
-                    <p>Даны 2 input - i-31 и i-32, оба - input[type=number]. При нажатии кнопки b-3 срабатывает функция
-                        f3.
-                        Функция должна прочитать содержимое i-31 и i-32 в переменные и сравнить их, вывести в out-3
-                        большее
-                        число.
-
-                        Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9 и 22, 5 и 111.</p>
-                    <p>Решение:</p>
-                    <div>
-                        <code class="code-3"></code>
-                    </div>
-                    <input class="i-31" type="number">
-                    <input class="i-32" type="number">
-                    <button type="button" class="btn btn-secondary b-3">Сравнить</button>
-                    <p>Результат:</p>
-                    <div class="out-3 alert alert-success">
-
                     </div>
                 </div>
             </div>
+
+
+            <div class="sticky-top bg-light p-3">
+                <p>Выбранное значение:</p>
+                <div class="alert alert-info range-out " role="alert">
+
+                </div>
+            </div>
+            <h5>HTML урока:</h5>
+            <div class="border p-3">
+                <p>Color picker</p>
+                <div>
+                    <input class="input-lesson-4" type="color">
+                    <button class="btn border btn-lesson-4">Выбрать</button>
+                </div>
+            </div>
+            <div class="border p-3">
+                <p>Дата пикер</p>
+                <div>
+                    <input class="date-lesson-4" type="date">
+                    <button class="btn border btn2-lesson-4">Выбрать</button>
+                </div>
+            </div>
+            <div class="border p-3">
+                <p>Range <span class="range-values badge bg-info text-light">0</span></p>
+                <div>
+                    <input class="form-range range-lesson-4" type="range" min="0" max="200" value="0">
+                    <button class="btn border btn3-lesson-4">Выбрать</button>
+                </div>
+            </div>
+            <div class="border p-3 mb-3">
+                <p>Checkbox</p>
+                <div class="form-check">
+                    <input class="form-check-input checkbox-lesson-4" type="checkbox" value=""
+                           id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+                <button class="btn border btn4-lesson-4">
+                    Выбрать
+                </button>
+            </div>
+            <div class="border">
+                <div class="card-header">
+                    Text Area
+                </div>
+                <div class="card-body">
+                    <div class="form-floating">
+                                    <textarea class="form-control textarea-lesson4" placeholder="Leave a comment here"
+                                              id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Comments</label>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn border btn5-lesson-4">
+                        Выбрать
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="range-out2">
+
+            </div>
+            <button class="btn btn-outline" id="deleteAlert">Закрыть алерт</button>
+        </div>
+        <h5 id="list-item-4-2">Домашка:</h5>
+        <div class="border p-3 mb-3">
+            <b class="task1title">Task 1</b>
+            <p>Создайте button.b-1 - при нажатии на него выводите alert с номером задачи.</p>
+            <p>Решение:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+        const btn1lesson4 = document.querySelector('.btn1lesson4')
+        const task1title = document.querySelector('.task1title')
+
+        btn1lesson4.onclick = () => {
+            alert(task1title.innerText)
+        }
+                                </code>
+                            </pre>
+            <div>
+                <button class="btn border bg-light btn1lesson4">Свершить</button>
+            </div>
+        </div>
+
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 2</b>
+            <p>Создайте input.b-2 type=button - при нажатии на него выводите alert с номером задачи. Номер
+                задачи просто пропишите вручную.</p>
+            <p>Решение:</p>
+            <pre>
+                                 <code class="task2-lesson4 language-js">
+        const input1lesson4 = document.querySelector('.input1lesson4')
+
+        input1lesson4.onclick = () => alert('Номер задачи: 2')
+                            </code>
+                            </pre>
+            <p>Результат:</p>
+            <div>
+                <input type="button" value="Свершить" class="input1lesson4">
+            </div>
+        </div>
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 3</b>
+            <p>Создайте p.p-3 - при нажатии на него выводите alert с номером задачи.</p>
+            <p>Решение:</p>
+            <pre>
+                                 <code class="task2-lesson4 language-js">
+    const p3Lesson4Input = document.querySelector('.p3Lesson4Input')
+
+    p3Lesson4Input.onclick = () => alert(3)
+                                </code>
+                            </pre>
+            <p>Результат:</p>
+            <div>
+                <p class="p3Lesson4Input">p.p-3</p>
+            </div>
         </div>
     </div>
+    <div id="list-item-5" class="lessonFive mt-5">
+        <h3>УРОК 5. ЦИКЛЫ В JAVASCRIPT (ЧАСТЬ 1)</h3>
+        <p id="list-item-5-1">Код урока:</p>
+        <div class="border p-3 mb-3">
+            <pre>
+                <code class="lesson4Code language-js">
 
+                </code>
+            </pre>
+        </div>
+        <h5>HTML урока:</h5>
+        <div class="border p-3">
+            <div class="lesson5div mb-2 p-2">1</div>
+            <div class="lesson5div mb-2 p-2">2</div>
+            <div class="lesson5div p-2">3</div>
+        </div>
+        <h5 id="list-item-5-2">Домашка:</h5>
+        <div class="border p-3 mb-3">
+            <b class="task1title">Task 1</b>
+            <p>Создайте button.b-1 - при нажатии на него выводите alert с номером задачи.</p>
+            <p>Решение:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+
+                                </code>
+                            </pre>
+            <div>
+
+            </div>
+        </div>
+
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 2</b>
+            <p>Создайте input.b-2 type=button - при нажатии на него выводите alert с номером задачи. Номер
+                задачи просто пропишите вручную.</p>
+            <p>Решение:</p>
+            <pre>
+                            <code class="task2-lesson4 language-js">
+
+                            </code>
+                        </pre>
+            <p>Результат:</p>
+            <div>
+                <input type="button" value="Свершить" class="input1lesson4">
+            </div>
+        </div>
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 3</b>
+            <p>Создайте p.p-3 - при нажатии на него выводите alert с номером задачи.</p>
+            <p>Решение:</p>
+            <pre>
+                            <code class="task2-lesson4 language-js">
+
+                            </code>
+                        </pre>
+            <p>Результат:</p>
+            <div>
+                <p class="p-3">p.p-3</p>
+            </div>
+        </div>
+    </div>
 </div>
 
+
+<script src="https://kit.fontawesome.com/0bc74c45ad.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
