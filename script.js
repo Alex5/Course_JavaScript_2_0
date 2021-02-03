@@ -1,3 +1,4 @@
+// noinspection JSUnresolvedVariable,JSUnresolvedFunction
 const scrollSpy = new bootstrap.ScrollSpy(document.body, {
     target: '#navbar'
 })
@@ -80,7 +81,7 @@ const lesson3 = () => {
     const input3 = document.querySelector('.prep-input-3')
     button1.onclick = () => {
         let i = input3.value
-        if (i == 4) {
+        if (i === 4) {
             out.innerHTML = "true"
         } else {
             out.innerHTML = "false"
@@ -199,13 +200,11 @@ const lesson4 = () => {
         textAreaLesson4.value = ''
     }
 
-    const removeAlert = () => {
+    alertCloseBtn.onclick = () => {
         const alert = document.querySelector('.areaAlert')
         alert.remove();
         return false;
     }
-
-    alertCloseBtn.onclick = removeAlert
     lesson4code.innerHTML = lesson4
 
     //form
@@ -252,9 +251,64 @@ const lesson5 = () => {
         div2[i].style.border = '3px solid black'
         console.log(i)
     }
+
+    const btn1lesson5 = document.querySelector('.btn1lesson5')
+    const radio1lesson5 = document.querySelectorAll(".radio1lesson5[type=radio]")
+    const out1lesson5 = document.querySelector('.out1lesson5')
+
+    btn1lesson5.onclick = () => {
+        for (let i = 0; i < radio1lesson5.length; i++) {
+            if (radio1lesson5[i].checked) {
+                out1lesson5.innerHTML = (radio1lesson5[i].value)
+            }
+        }
+    }
 }
 
 lesson5()
+
+// my example
+
+const lesson5MyExample = () => {
+    const out2lesson5 = document.querySelector('.out2lesson5')
+    let content = document.querySelector('.out2lesson5').innerHTML
+    let myCodeLesson5 = document.querySelector('.myCodeLesson5')
+    const cardNumber = document.getElementById('cardNumber')
+    const cardNumberPicker = document.querySelector('.cardNumberPicker')
+
+    cardNumberPicker.onclick = () => {
+        let cardNum = cardNumber.value
+
+        for (let i = 0; i < cardNum; i++) {
+            content += `
+            <div class="card m-1" style="flex: 1">
+                <div class="card-body ">
+                    <h5 class="card-title">№ ${randomInteger()}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+    `
+        }
+        out2lesson5.innerHTML = content
+    }
+
+
+    function randomInteger() {
+        // получаем случаайное число
+        let min = 1
+        let max = 100
+        let rand = min - 0.5 + Math.random() * (max - min + 1);
+        return Math.round(rand);
+    }
+
+    myCodeLesson5.innerHTML = lesson5MyExample
+}
+
+lesson5MyExample()
+
 
 //пробуем юзать токен
 
