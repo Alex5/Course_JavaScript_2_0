@@ -30,7 +30,7 @@
     </div>
 </nav>
 <div class="container root">
-    <div id="list-item-1" class="lessonOne">
+    <div id="list-item-1" class="lesson1 mt-5">
         <h5>УРОК 1. Стартуем и пишем первую программу</h5>
         <h4 id="item-1-1">Вывод на экран:</h4>
         <div class="border p-3 mb-3">
@@ -53,7 +53,7 @@
         </div>
 
     </div>
-    <div id="list-item-2" class="lessonTwo">
+    <div id="list-item-2" class="lesson2 mt-5">
         <h5>УРОК 2. ОСНОВЫ ВВОДА ДАННЫХ</h5>
         <p id="list-item-2-1">Код урока:</p>
         <div class="border p-3 mb-3">
@@ -129,7 +129,7 @@
             </div>
         </div>
     </div>
-    <div id="list-item-3" class="lessonThree">
+    <div id="list-item-3" class="lesson3 mt-5">
         <h5>УРОК 3. ОПЕРАТОР IF, ELSE, SWITCH CASE - ВЫБОР В JAVASCRIPT</h5>
         <p id="list-item-3-1">Код урока:</p>
         <div class="border p-3 mb-3">
@@ -240,7 +240,7 @@
             </div>
         </div>
     </div>
-    <div id="list-item-4" class="lessonFour">
+    <div id="list-item-4" class="lesson4 mt-5">
         <h5>УРОК 4. РАБОТАЕМ С ФОРМАМИ: INPUT, RANGE, TEXTAREA, CHECKBOX..</h5>
         <p id="list-item-4-1">Код урока:</p>
         <div class="border p-3 mb-3">
@@ -385,7 +385,7 @@
             </div>
         </div>
     </div>
-    <div id="list-item-5" class="lessonFive mt-5">
+    <div id="list-item-5" class="lesson5 mt-5">
         <h3>УРОК 5. ЦИКЛЫ В JAVASCRIPT (ЧАСТЬ 1)</h3>
         <p id="list-item-5-1">Код урока:</p>
         <div class="border p-3 mb-3">
@@ -432,52 +432,312 @@
 
         </div>
         <h5>Мой код:</h5>
-       <div>
-           <img class="img-fluid" src="assets/img/code/Screenshot_1.png" alt="">
-       </div>
+        <div>
+            <img class="img-fluid" src="assets/img/code/Screenshot_1.png" alt="">
+        </div>
         <h5 id="list-item-5-2">Домашка:</h5>
         <div class="border p-3 mb-3">
             <b class="task1title">Task 1</b>
-            <p>Создайте button.b-1 - при нажатии на него выводите alert с номером задачи.</p>
-            <p>Решение:</p>
-            <pre>
-                                 <code class="task1lesson4code language-js">
-
-                                </code>
-                            </pre>
-            <div>
+            <p>Кнопка b-1 запускает функцию t1. Функция должна выводить в out-1 строку вида: 1 2 3 4 5 6 7 8 9 ... 49
+                50</p>
+            <button class="btn btn-outline border b1lesson5">Запустить</button>
+            <div class="out3lesson5 d-flex flex-wrap">
 
             </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const b1lesson5 = document.querySelector('.b1lesson5')
+    const out3lesson5 = document.querySelector('.out3lesson5')
+
+    const t1lesson5 = () => {
+        for (let i = 1; i <= 50; i++) {
+             out3lesson5.innerHTML += `${i} `
+        }
+    }
+
+    b1lesson5.onclick = () => t1lesson5()
+                                </code>
+                            </pre>
+
         </div>
 
         <div class="border p-3 mb-3">
             <b class="task2title">Task 2</b>
-            <p>Создайте input.b-2 type=button - при нажатии на него выводите alert с номером задачи. Номер
-                задачи просто пропишите вручную.</p>
-            <p>Решение:</p>
-            <pre>
-                            <code class="task2-lesson4 language-js">
+            <p>Кнопка b-2 запускает функцию t2. Функция должна выводить в out-2 строку вида: 2 4 6 ... 122</p>
+            <button class="btn btn-outline border b2lesson5">Запустить</button>
+            <div class="out4lesson5 d-flex flex-wrap">
 
-                            </code>
-                        </pre>
-            <p>Результат:</p>
-            <div>
-                <input type="button" value="Свершить" class="input1lesson4">
             </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const b2lesson5 = document.querySelector('.b2lesson5')
+    const out4lesson5 = document.querySelector('.out4lesson5')
+
+    const t2lesson5 = () => {
+        for (let i = 2; i <= 124; i = i + 2) {
+            out4lesson5.innerHTML += `${i} `
+        }
+    }
+
+    b2lesson5.onclick = () => t2lesson5()
+                                </code>
+                            </pre>
+
         </div>
         <div class="border p-3 mb-3">
             <b class="task2title">Task 3</b>
-            <p>Создайте p.p-3 - при нажатии на него выводите alert с номером задачи.</p>
-            <p>Решение:</p>
-            <pre>
-                            <code class="task2-lesson4 language-js">
+            <p>Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
 
-                            </code>
-                        </pre>
-            <p>Результат:</p>
-            <div>
-                <p class="p-3">p.p-3</p>
+                25 24 23 22 . . 7</p>
+            <button class="btn btn-outline border b3lesson5">Запустить</button>
+            <div class="out5lesson5 d-flex flex-wrap">
+
             </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+        const b3lesson5 = document.querySelector('.b3lesson5')
+        const out5lesson5 = document.querySelector('.out5lesson5')
+
+        const t3lesson5 = () => {
+            for (let i = 25; i >= 7; i--) {
+                out5lesson5.innerHTML += `${i} `
+            }
+        }
+
+        b3lesson5.onclick = () => t3lesson5()
+                                </code>
+                            </pre>
+        </div>
+    </div>
+    <div id="list-item-6" class="lesson6 mt-5">
+        <h3>УРОК 6. ВЛОЖЕННЫЕ ЦИКЛЫ В JAVASCRIPT (ЧАСТЬ 2)</h3>
+        <p id="list-item-6-1">Код урока:</p>
+        <div class="border p-3 mb-3">
+            <pre>
+                <code class="lesson4Code language-js">
+
+                </code>
+            </pre>
+        </div>
+        <h5>HTML урока:</h5>
+        <div class="border p-3">
+
+        </div>
+        <h5 id="list-item-6-2">Домашка:</h5>
+        <div class="border p-3 mb-3">
+            <b class="task1title">Task 1</b>
+            <p>С помощью вложенных циклов, нарисуйте строку: ***_***_***_ <br><small>где звездочки рисуются с помощью
+                внутреннего цикла от 0 до 3, а _ с помощью внешнего.</small></p>
+            <b>Вывод:</b>
+            <div class="out1lesson6 d-flex flex-wrap">
+
+            </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const out1lesson6 = document.querySelector('.out1lesson6')
+
+    for (let i = 0; i <= 2; i++) {
+
+        for (let i = 0; i <= 2; i++) {
+            out1lesson6.innerHTML += '*'
+        }
+        out1lesson6.innerHTML += '_'
+    }
+                                </code>
+                            </pre>
+
+        </div>
+
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 2</b>
+            <p>С помощью вложенных циклов, нарисуйте строку: <br>
+                1 <br>
+                *_*_*_<br>
+                2<br>
+                *_*_*_<br>
+                3<br>
+                *_*_*_<br>
+            </p>
+            <b>Вывод:</b>
+            <div class="out2lesson6 d-flex flex-wrap">
+
+            </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const out2lesson6 = document.querySelector('.out2lesson6')
+
+    for (let i = 1; i <= 3; i++) {
+
+        switch (i) {
+            case 1:  out2lesson6.innerHTML += `${i}<br>`
+                break
+            default: out2lesson6.innerHTML += `<br>${i}<br>`
+        }
+
+        for (let i = 0; i <= 2; i++) {
+
+            for (let i = 0; i <= 0; i++) {
+
+                out2lesson6.innerHTML += '*'
+            }
+            out2lesson6.innerHTML += '_'
+        }
+    }
+                                </code>
+                            </pre>
+
+        </div>
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 3</b>
+            <p>С помощью вложенных циклов, нарисуйте строку: <br>
+                *_*_*_<br>
+                *_*_*_<br>
+                *_*_*_<br>
+                *_*_*_<br>
+                Решить задачу с помощью вложенных циклов. Внешний цикл выводит перенос строки br, внутренний -
+                звездочки, знак подчеркивания.</p>
+            <div class="out3lesson6 d-flex flex-wrap">
+
+            </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const out3lesson6 = document.querySelector('.out3lesson6')
+
+    for (let i = 1; i <= 4; i++) {
+
+        for (let i = 0; i <= 2; i++) {
+
+            for (let i = 0; i <= 0; i++) {
+
+                out3lesson6.innerHTML += '*'
+            }
+            out3lesson6.innerHTML += '_'
+        }
+
+        out3lesson6.innerHTML += `<br>`
+    }
+                                </code>
+                            </pre>
+        </div>
+    </div>
+    <div id="list-item-7" class="lesson6 mt-5">
+        <h3>УРОК 7. ФУНКЦИИ И ВСЕ О НИХ</h3>
+        <p id="list-item-7-1">Код урока:</p>
+        <div class="border p-3 mb-3">
+            <pre>
+                <code class="lesson4Code language-js">
+
+                </code>
+            </pre>
+        </div>
+        <h5>HTML урока:</h5>
+        <div class="border p-3">
+
+        </div>
+        <h5 id="list-item-7-2">Домашка:</h5>
+        <div class="border p-3 mb-3">
+            <b class="task1title">Task 1</b>
+            <p>С помощью вложенных циклов, нарисуйте строку: ***_***_***_ <br><small>где звездочки рисуются с помощью
+                внутреннего цикла от 0 до 3, а _ с помощью внешнего.</small></p>
+            <b>Вывод:</b>
+            <div class="out1lesson6 d-flex flex-wrap">
+
+            </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const out1lesson6 = document.querySelector('.out1lesson6')
+
+    for (let i = 0; i <= 2; i++) {
+
+        for (let i = 0; i <= 2; i++) {
+            out1lesson6.innerHTML += '*'
+        }
+        out1lesson6.innerHTML += '_'
+    }
+                                </code>
+                            </pre>
+
+        </div>
+
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 2</b>
+            <p>С помощью вложенных циклов, нарисуйте строку: <br>
+                1 <br>
+                *_*_*_<br>
+                2<br>
+                *_*_*_<br>
+                3<br>
+                *_*_*_<br>
+            </p>
+            <b>Вывод:</b>
+            <div class="out2lesson6 d-flex flex-wrap">
+
+            </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const out2lesson6 = document.querySelector('.out2lesson6')
+
+    for (let i = 1; i <= 3; i++) {
+
+        switch (i) {
+            case 1:  out2lesson6.innerHTML += `${i}<br>`
+                break
+            default: out2lesson6.innerHTML += `<br>${i}<br>`
+        }
+
+        for (let i = 0; i <= 2; i++) {
+
+            for (let i = 0; i <= 0; i++) {
+
+                out2lesson6.innerHTML += '*'
+            }
+            out2lesson6.innerHTML += '_'
+        }
+    }
+                                </code>
+                            </pre>
+
+        </div>
+        <div class="border p-3 mb-3">
+            <b class="task2title">Task 3</b>
+            <p>С помощью вложенных циклов, нарисуйте строку: <br>
+                *_*_*_<br>
+                *_*_*_<br>
+                *_*_*_<br>
+                *_*_*_<br>
+                Решить задачу с помощью вложенных циклов. Внешний цикл выводит перенос строки br, внутренний -
+                звездочки, знак подчеркивания.</p>
+            <div class="out3lesson6 d-flex flex-wrap">
+
+            </div>
+            <p>Код:</p>
+            <pre>
+                                 <code class="task1lesson4code language-js">
+    const out3lesson6 = document.querySelector('.out3lesson6')
+
+    for (let i = 1; i <= 4; i++) {
+
+        for (let i = 0; i <= 2; i++) {
+
+            for (let i = 0; i <= 0; i++) {
+
+                out3lesson6.innerHTML += '*'
+            }
+            out3lesson6.innerHTML += '_'
+        }
+
+        out3lesson6.innerHTML += `<br>`
+    }
+                                </code>
+                            </pre>
         </div>
     </div>
 </div>

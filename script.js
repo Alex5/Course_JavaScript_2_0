@@ -263,6 +263,47 @@ const lesson5 = () => {
             }
         }
     }
+
+    //task 1
+
+    const b1lesson5 = document.querySelector('.b1lesson5')
+    const out3lesson5 = document.querySelector('.out3lesson5')
+
+    const t1lesson5 = () => {
+        for (let i = 1; i <= 50; i++) {
+            out3lesson5.innerHTML += `${i}&#160;`
+        }
+    }
+
+    b1lesson5.onclick = () => t1lesson5()
+
+    //task 2
+
+    const b2lesson5 = document.querySelector('.b2lesson5')
+    const out4lesson5 = document.querySelector('.out4lesson5')
+
+    const t2lesson5 = () => {
+        for (let i = 2; i <= 122; i = i + 2) {
+            out4lesson5.innerHTML += `${i}&#160;`
+        }
+    }
+
+    b2lesson5.onclick = () => t2lesson5()
+
+    //task 3
+
+    const b3lesson5 = document.querySelector('.b3lesson5')
+    const out5lesson5 = document.querySelector('.out5lesson5')
+
+    const t3lesson5 = () => {
+        for (let i = 25; i >= 7; i--) {
+            out5lesson5.innerHTML += `${i}&#160;`
+        }
+    }
+
+    b3lesson5.onclick = () => t3lesson5()
+
+
 }
 
 lesson5()
@@ -290,7 +331,7 @@ const lesson5MyExample = () => {
                     <a href="#" class="card-link">Another link</a>
                 </div>
             </div>
-    `
+            `
         }
         out2lesson5.innerHTML = content
     }
@@ -303,14 +344,71 @@ const lesson5MyExample = () => {
         let rand = min - 0.5 + Math.random() * (max - min + 1);
         return Math.round(rand);
     }
-
-    myCodeLesson5.innerHTML = lesson5MyExample
 }
 
 lesson5MyExample()
 
 
-//пробуем юзать токен
+// lesson 6 вложенные циклы
+
+// Task 1
+// Ниже первое задание с циклами, почему внутри функции происходит лишний оборот цикла
+
+const out1lesson6 = document.querySelector('.out1lesson6')
+
+for (let i = 0; i <= 2; i++) {
+
+    for (let i = 0; i <= 2; i++) {
+        out1lesson6.innerHTML += '*'
+    }
+    out1lesson6.innerHTML += '_'
+}
+
+// Task 2
+
+const out2lesson6 = document.querySelector('.out2lesson6')
+
+for (let i = 1; i <= 3; i++) {
+
+    switch (i) {
+        case 1:
+            out2lesson6.innerHTML += `${i}<br>`
+            break
+        default:
+            out2lesson6.innerHTML += `<br>${i}<br>`
+    }
+
+    for (let i = 0; i <= 2; i++) {
+
+        for (let i = 0; i <= 0; i++) {
+
+            out2lesson6.innerHTML += '*'
+        }
+        out2lesson6.innerHTML += '_'
+    }
+}
+
+// Task 3
+
+const out3lesson6 = document.querySelector('.out3lesson6')
+
+for (let i = 1; i <= 4; i++) {
+
+    for (let i = 0; i <= 2; i++) {
+
+        for (let i = 0; i <= 0; i++) {
+
+            out3lesson6.innerHTML += '*'
+        }
+        out3lesson6.innerHTML += '_'
+    }
+
+    out3lesson6.innerHTML += `<br>`
+}
+
+// lesson 7
+
+
 
 
 
