@@ -1,8 +1,3 @@
-// noinspection JSUnresolvedVariable,JSUnresolvedFunction
-const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '#navbar'
-})
-
 document.getElementById('out').innerHTML = 'Hello'
 // let a = document.querySelector('#one')
 // a.innerHTML = 999
@@ -239,8 +234,7 @@ lesson4()
 const lesson5 = () => {
     const div = document.querySelectorAll('.lesson5div')
     const div2 = document.getElementsByClassName('lesson5div')
-    const div3 = document.getElementsByTagName('div')
-    console.log(div3)
+    // const div3 = document.getElementsByTagName('div')
 
     for (let i = 0; i < div.length; i++) {
         div[i].style.background = '#b6d1ff'
@@ -406,7 +400,9 @@ for (let i = 1; i <= 4; i++) {
     out3lesson6.innerHTML += `<br>`
 }
 
-// lesson 7
+
+
+
 
 
 

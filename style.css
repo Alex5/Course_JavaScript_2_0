@@ -1,3 +1,7 @@
 .root {
     margin-top: 5em;
 }
+
+.block {
+    display: block;
+}
