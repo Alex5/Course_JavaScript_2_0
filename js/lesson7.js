@@ -65,7 +65,7 @@ btn2lesson7.onclick = () => {
 
 // Task 3
 
-const btn3lesson7 = document.querySelector('.btn3lesson7')
+// const btn3lesson7 = document.querySelector('.btn3lesson7')
 const btn4lesson7 = document.querySelector('.btn4lesson7')
 const out3lesson7 = document.querySelector('.out3lesson7')
 

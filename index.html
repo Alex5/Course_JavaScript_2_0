@@ -6,9 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript 2.0 - Методичка</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <!--style-->
     <link rel="stylesheet" href="prism.css">
     <link rel="stylesheet" href="style.css">
 
@@ -30,7 +28,7 @@
     </div>
 </nav>
 <div class="container root">
-    <div id="list-item-1" class="lesson1 mt-5">
+    <div id="lesson1" class="lesson1 mt-5">
         <h5>УРОК 1. Стартуем и пишем первую программу</h5>
         <h4 id="item-1-1">Вывод на экран:</h4>
         <div class="border p-3 mb-3">
@@ -257,9 +255,9 @@
                          aria-labelledby="headingOne"
                          data-bs-parent="#accordionExample">
                         <div class="accordion-body p-0">
-                                        <pre>
-                                            <code class="lesson4Code language-js"></code>
-                                        </pre>
+                                            <pre>
+                                                <code class="lesson4Code language-js"></code>
+                                            </pre>
                         </div>
                     </div>
                 </div>
@@ -313,8 +311,9 @@
                 </div>
                 <div class="card-body">
                     <div class="form-floating">
-                                    <textarea class="form-control textarea-lesson4" placeholder="Leave a comment here"
-                                              id="floatingTextarea"></textarea>
+                                        <textarea class="form-control textarea-lesson4"
+                                                  placeholder="Leave a comment here"
+                                                  id="floatingTextarea"></textarea>
                         <label for="floatingTextarea">Comments</label>
                     </div>
                 </div>
@@ -337,15 +336,15 @@
             <p>Создайте button.b-1 - при нажатии на него выводите alert с номером задачи.</p>
             <p>Решение:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-        const btn1lesson4 = document.querySelector('.btn1lesson4')
-        const task1title = document.querySelector('.task1title')
+                                     <code class="task1lesson4code language-js">
+            const btn1lesson4 = document.querySelector('.btn1lesson4')
+            const task1title = document.querySelector('.task1title')
 
-        btn1lesson4.onclick = () => {
-            alert(task1title.innerText)
-        }
-                                </code>
-                            </pre>
+            btn1lesson4.onclick = () => {
+                alert(task1title.innerText)
+            }
+                                    </code>
+                                </pre>
             <div>
                 <button class="btn border bg-light btn1lesson4">Свершить</button>
             </div>
@@ -357,12 +356,12 @@
                 задачи просто пропишите вручную.</p>
             <p>Решение:</p>
             <pre>
-                                 <code class="task2-lesson4 language-js">
-        const input1lesson4 = document.querySelector('.input1lesson4')
+                                     <code class="task2-lesson4 language-js">
+            const input1lesson4 = document.querySelector('.input1lesson4')
 
-        input1lesson4.onclick = () => alert('Номер задачи: 2')
-                            </code>
-                            </pre>
+            input1lesson4.onclick = () => alert('Номер задачи: 2')
+                                </code>
+                                </pre>
             <p>Результат:</p>
             <div>
                 <input type="button" value="Свершить" class="input1lesson4">
@@ -373,12 +372,12 @@
             <p>Создайте p.p-3 - при нажатии на него выводите alert с номером задачи.</p>
             <p>Решение:</p>
             <pre>
-                                 <code class="task2-lesson4 language-js">
-    const p3Lesson4Input = document.querySelector('.p3Lesson4Input')
+                                     <code class="task2-lesson4 language-js">
+        const p3Lesson4Input = document.querySelector('.p3Lesson4Input')
 
-    p3Lesson4Input.onclick = () => alert(3)
-                                </code>
-                            </pre>
+        p3Lesson4Input.onclick = () => alert(3)
+                                    </code>
+                                </pre>
             <p>Результат:</p>
             <div>
                 <p class="p3Lesson4Input">p.p-3</p>
@@ -389,11 +388,11 @@
         <h3>УРОК 5. ЦИКЛЫ В JAVASCRIPT (ЧАСТЬ 1)</h3>
         <p id="list-item-5-1">Код урока:</p>
         <div class="border p-3 mb-3">
-            <pre>
-                <code class="lesson4Code language-js">
+                <pre>
+                    <code class="lesson4Code language-js">
 
-                </code>
-            </pre>
+                    </code>
+                </pre>
         </div>
         <h5>HTML урока:</h5>
         <div class="border p-3">
@@ -433,7 +432,7 @@
         </div>
         <h5>Мой код:</h5>
         <div>
-            <img class="img-fluid" src="assets/img/code/Screenshot_1.png" alt="">
+            <img class="img-fluid" src="assets/img/code.png" alt="">
         </div>
         <h5 id="list-item-5-2">Домашка:</h5>
         <div class="border p-3 mb-3">
@@ -446,19 +445,19 @@
             </div>
             <p>Код:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-    const b1lesson5 = document.querySelector('.b1lesson5')
-    const out3lesson5 = document.querySelector('.out3lesson5')
+                                     <code class="task1lesson4code language-js">
+        const b1lesson5 = document.querySelector('.b1lesson5')
+        const out3lesson5 = document.querySelector('.out3lesson5')
 
-    const t1lesson5 = () => {
-        for (let i = 1; i <= 50; i++) {
-             out3lesson5.innerHTML += `${i} `
+        const t1lesson5 = () => {
+            for (let i = 1; i <= 50; i++) {
+                 out3lesson5.innerHTML += `${i} `
+            }
         }
-    }
 
-    b1lesson5.onclick = () => t1lesson5()
-                                </code>
-                            </pre>
+        b1lesson5.onclick = () => t1lesson5()
+                                    </code>
+                                </pre>
 
         </div>
 
@@ -471,19 +470,19 @@
             </div>
             <p>Код:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-    const b2lesson5 = document.querySelector('.b2lesson5')
-    const out4lesson5 = document.querySelector('.out4lesson5')
+                                     <code class="task1lesson4code language-js">
+        const b2lesson5 = document.querySelector('.b2lesson5')
+        const out4lesson5 = document.querySelector('.out4lesson5')
 
-    const t2lesson5 = () => {
-        for (let i = 2; i <= 124; i = i + 2) {
-            out4lesson5.innerHTML += `${i} `
+        const t2lesson5 = () => {
+            for (let i = 2; i <= 124; i = i + 2) {
+                out4lesson5.innerHTML += `${i} `
+            }
         }
-    }
 
-    b2lesson5.onclick = () => t2lesson5()
-                                </code>
-                            </pre>
+        b2lesson5.onclick = () => t2lesson5()
+                                    </code>
+                                </pre>
 
         </div>
         <div class="border p-3 mb-3">
@@ -497,30 +496,30 @@
             </div>
             <p>Код:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-        const b3lesson5 = document.querySelector('.b3lesson5')
-        const out5lesson5 = document.querySelector('.out5lesson5')
+                                     <code class="task1lesson4code language-js">
+            const b3lesson5 = document.querySelector('.b3lesson5')
+            const out5lesson5 = document.querySelector('.out5lesson5')
 
-        const t3lesson5 = () => {
-            for (let i = 25; i >= 7; i--) {
-                out5lesson5.innerHTML += `${i} `
+            const t3lesson5 = () => {
+                for (let i = 25; i >= 7; i--) {
+                    out5lesson5.innerHTML += `${i} `
+                }
             }
-        }
 
-        b3lesson5.onclick = () => t3lesson5()
-                                </code>
-                            </pre>
+            b3lesson5.onclick = () => t3lesson5()
+                                    </code>
+                                </pre>
         </div>
     </div>
     <div id="list-item-6" class="lesson6 mt-5">
         <h3>УРОК 6. ВЛОЖЕННЫЕ ЦИКЛЫ В JAVASCRIPT (ЧАСТЬ 2)</h3>
         <p id="list-item-6-1">Код урока:</p>
         <div class="border p-3 mb-3">
-            <pre>
-                <code class="lesson4Code language-js">
+                <pre>
+                    <code class="lesson4Code language-js">
 
-                </code>
-            </pre>
+                    </code>
+                </pre>
         </div>
         <h5>HTML урока:</h5>
         <div class="border p-3">
@@ -537,18 +536,18 @@
             </div>
             <p>Код:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-    const out1lesson6 = document.querySelector('.out1lesson6')
-
-    for (let i = 0; i <= 2; i++) {
+                                     <code class="task1lesson4code language-js">
+        const out1lesson6 = document.querySelector('.out1lesson6')
 
         for (let i = 0; i <= 2; i++) {
-            out1lesson6.innerHTML += '*'
+
+            for (let i = 0; i <= 2; i++) {
+                out1lesson6.innerHTML += '*'
+            }
+            out1lesson6.innerHTML += '_'
         }
-        out1lesson6.innerHTML += '_'
-    }
-                                </code>
-                            </pre>
+                                    </code>
+                                </pre>
 
         </div>
 
@@ -568,28 +567,28 @@
             </div>
             <p>Код:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-    const out2lesson6 = document.querySelector('.out2lesson6')
+                                     <code class="task1lesson4code language-js">
+        const out2lesson6 = document.querySelector('.out2lesson6')
 
-    for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i <= 3; i++) {
 
-        switch (i) {
-            case 1:  out2lesson6.innerHTML += `${i}<br>`
-                break
-            default: out2lesson6.innerHTML += `<br>${i}<br>`
-        }
-
-        for (let i = 0; i <= 2; i++) {
-
-            for (let i = 0; i <= 0; i++) {
-
-                out2lesson6.innerHTML += '*'
+            switch (i) {
+                case 1:  out2lesson6.innerHTML += `${i}<br>`
+                    break
+                default: out2lesson6.innerHTML += `<br>${i}<br>`
             }
-            out2lesson6.innerHTML += '_'
+
+            for (let i = 0; i <= 2; i++) {
+
+                for (let i = 0; i <= 0; i++) {
+
+                    out2lesson6.innerHTML += '*'
+                }
+                out2lesson6.innerHTML += '_'
+            }
         }
-    }
-                                </code>
-                            </pre>
+                                    </code>
+                                </pre>
 
         </div>
         <div class="border p-3 mb-3">
@@ -606,24 +605,24 @@
             </div>
             <p>Код:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-    const out3lesson6 = document.querySelector('.out3lesson6')
+                                     <code class="task1lesson4code language-js">
+        const out3lesson6 = document.querySelector('.out3lesson6')
 
-    for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= 4; i++) {
 
-        for (let i = 0; i <= 2; i++) {
+            for (let i = 0; i <= 2; i++) {
 
-            for (let i = 0; i <= 0; i++) {
+                for (let i = 0; i <= 0; i++) {
 
-                out3lesson6.innerHTML += '*'
+                    out3lesson6.innerHTML += '*'
+                }
+                out3lesson6.innerHTML += '_'
             }
-            out3lesson6.innerHTML += '_'
-        }
 
-        out3lesson6.innerHTML += `<br>`
-    }
-                                </code>
-                            </pre>
+            out3lesson6.innerHTML += `<br>`
+        }
+                                    </code>
+                                </pre>
         </div>
     </div>
     <div id="list-item-7" class="lesson6 mt-5">
@@ -634,14 +633,14 @@
             <p>Напишите функцию t1, которая при нажатии кнопки выводит в out-1 переменную a1.</p>
 
             <pre>
-                <code class="language-js">
-    let a1 = 8;
-    function t1() {
+                    <code class="language-js">
+        let a1 = 8;
+        function t1() {
 
-    }
-    document.querySelector(‘.b-1’).onclick = t1;
-                </code>
-            </pre>
+        }
+        document.querySelector(‘.b-1’).onclick = t1;
+                    </code>
+                </pre>
             <button class="btn btn-outline border btn1lesson7">Push</button>
             <div><b>Вывод:</b></div>
             <div class="out1lesson7 d-flex flex-wrap">
@@ -650,16 +649,16 @@
             <p>Решение:</p>
 
             <pre>
-                <code class="task1lesson4code language-js">
-    const btn1lesson7 = document.querySelector('.btn1lesson7')
-    const out1lesson7 = document.querySelector('.out1lesson7')
-    const a1 = 8;
+                    <code class="task1lesson4code language-js">
+        const btn1lesson7 = document.querySelector('.btn1lesson7')
+        const out1lesson7 = document.querySelector('.out1lesson7')
+        const a1 = 8;
 
-    const t1 = () => out1lesson7.innerHTML = a1
+        const t1 = () => out1lesson7.innerHTML = a1
 
-    btn1lesson7.onclick = t1
-                </code>
-            </pre>
+        btn1lesson7.onclick = t1
+                    </code>
+                </pre>
 
         </div>
 
@@ -672,16 +671,16 @@
                 внимание, как изменился вызов функции.
             </p>
             <pre>
-                <code class="language-js">
-    let a2 = 8;
-    function t2() {
+                    <code class="language-js">
+        let a2 = 8;
+        function t2() {
 
-    }
-    document.querySelector(‘.b-2’).onclick =function() {
-        document.querySelector(‘.out-2’).textContent = f2();
-    }
-                </code>
-            </pre>
+        }
+        document.querySelector(‘.b-2’).onclick =function() {
+            document.querySelector(‘.out-2’).textContent = f2();
+        }
+                    </code>
+                </pre>
         </div>
         <p>Решение:</p>
         <button class="btn btn-outline border btn2lesson7">Push</button>
@@ -691,21 +690,21 @@
         </div>
         <p>Код решения:</p>
         <pre>
-                                 <code class="task1lesson4code language-js">
-    const btn2lesson7 = document.querySelector('.btn2lesson7')
-    const out2lesson7 = document.querySelector('.out2lesson7')
-    const a2 = 8;
+                                     <code class="task1lesson4code language-js">
+        const btn2lesson7 = document.querySelector('.btn2lesson7')
+        const out2lesson7 = document.querySelector('.out2lesson7')
+        const a2 = 8;
 
-    const t2 = () => {
-        return a2
-    }
+        const t2 = () => {
+            return a2
+        }
 
-    btn2lesson7.onclick = () => {
-        out2lesson7.textContent = t2()
-    }
+        btn2lesson7.onclick = () => {
+            out2lesson7.textContent = t2()
+        }
 
-                                </code>
-                            </pre>
+                                    </code>
+                                </pre>
         <div class="border p-3 mb-3">
             <b class="task2title">Task 3</b>
             <p>Наша предыдущая функция, сильно все еще зависима от внешних переменных. Давайте сделаем ее более
@@ -715,18 +714,18 @@
                 функцию
                 на двух примерах, с помощью кнопок b3-1 и b3-2.</p>
             <pre>
-            <code class="language-js">
-                function t3(a,b) {
+                <code class="language-js">
+                    function t3(a,b) {
 
-                }
-                document.querySelector(‘.b-3-1’).onclick =function() {
-                    document.querySelector(‘.out-3-1’).textContent = t3(3,4);
-                }
-                document.querySelector(‘.b-3-2’).onclick = function(){
-                    document.querySelector(‘.out-3-2’).textContent = t3(5,6);
-                }
-            </code>
-        </pre>
+                    }
+                    document.querySelector(‘.b-3-1’).onclick =function() {
+                        document.querySelector(‘.out-3-1’).textContent = t3(3,4);
+                    }
+                    document.querySelector(‘.b-3-2’).onclick = function(){
+                        document.querySelector(‘.out-3-2’).textContent = t3(5,6);
+                    }
+                </code>
+            </pre>
             <p>Решение:</p>
             <button class="btn btn-outline border btn3lesson7">Push</button>
             <button class="btn btn-outline border btn4lesson7">Push 2</button>
@@ -741,48 +740,202 @@
             </div>
             <p>Код решения:</p>
             <pre>
-                                 <code class="task1lesson4code language-js">
-    const btn3lesson7 = document.querySelector('.btn3lesson7')
-    const btn4lesson7 = document.querySelector('.btn4lesson7')
-    const out3lesson7 = document.querySelector('.out3lesson7')
+                                     <code class="task1lesson4code language-js">
+        const btn3lesson7 = document.querySelector('.btn3lesson7')
+        const btn4lesson7 = document.querySelector('.btn4lesson7')
+        const out3lesson7 = document.querySelector('.out3lesson7')
 
-    const t3 = (a, b) => {
-        return a * b
-    }
+        const t3 = (a, b) => {
+            return a * b
+        }
 
-    btn3lesson7.onclick = () => {
-        out3lesson7.textContent = t3(8,9)
-    }
+        btn3lesson7.onclick = () => {
+            out3lesson7.textContent = t3(8,9)
+        }
 
-    btn4lesson7.onclick = () => {
-        out3lesson7.textContent = t3(7,3)
-    }
-                                </code>
-                            </pre>
+        btn4lesson7.onclick = () => {
+            out3lesson7.textContent = t3(7,3)
+        }
+                                    </code>
+                                </pre>
+        </div>
+    </div>
+    <div id="list-item-8-b" class="lesson6 mt-5">
+        <h3>УРОК 8 Бонус. JavaScript textContent vs innerHTML</h3>
+        <h5 id="list-item-8-b-1">Урок</h5>
+        <div class="border mb-3 p-3">
+            <div class="primer">
+                Создавать интерактивные пользовательские <br> интерфейсы на <b>React</b> — приятно и просто. Вам <br>достаточно
+                описать, как части <i>интерфейса</i> приложения выглядят в разных состояниях. React будет <span
+                    class="block">своевременно</span> их
+                обновлять, когда данные изменяются.
+            </div>
+            <div class="out1lesson8"></div>
         </div>
     </div>
     <div id="list-item-8" class="lesson6 mt-5">
-        <h3>УРОК 8. JavaScript textContent vs innerHTML</h3>
+        <h3>УРОК 8 ЦИКЛ WHILE, DO WHILE</h3>
         <h5 id="list-item-8-1">Урок</h5>
         <div class="border mb-3 p-3">
-            <div class="primer">
-               Создавать интерактивные пользовательские <br> интерфейсы на <b>React</b> — приятно и просто. Вам <br>достаточно
-                    описать, как части <i>интерфейса</i> приложения выглядят в разных состояниях. React будет <span
-                            class="block">своевременно</span> их
-                    обновлять, когда данные изменяются.
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Показать код урока
+            </button>
+            <div class="collapse" id="collapseExample">
+                    <pre>
+    <code class="language-js">
+// Урок 8 while, do while
+
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+}
+
+let k = 0
+
+while (k <= 5) {
+    k++
+    if (k === 3) continue;
+
+}
+
+//0.......10
+
+let sum = 0
+let p = 0
+
+while (p <= 10) {
+    sum = sum + p;
+    p++
+    console.log(sum)
+}
+
+console.log("sum = " + sum)
+
+// ****
+// ****
+// ****
+
+let out2lesson8 = document.querySelector('.out2lesson8')
+let outStr = ``
+p = 0
+let flag = 3
+
+while (p < 4) {
+    let p1 = 0
+    while (p1 < 4) {
+        if (p1 < flag) {
+            outStr += `0`
+
+        } else {
+            outStr += `*`
+        }
+        p1++
+    }
+    flag--
+    outStr += `<br>`
+    p++
+}
+
+out2lesson8.innerHTML = outStr
+    </code>
+</pre>
             </div>
-            <div class="out1lesson8"></div>
+        </div>
+        <h5>Вывод урока:</h5>
+        <div class="out2lesson8 border mb-3 p-3">
+
+        </div>
+        <h5>Домашка:</h5>
+        <div class="task1lesson8">
+            <b>Task 1</b>
+            <p>Кнопка b-1 запускает функцию t1. Функция должна выводить в out-1 строку вида:
+
+                1 2 3 4 5 6 7 8 9 ... 49 50
+
+                от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла while.</p>
+            <button class="btn1lesson8 btn btn-outline border mb-3">Start</button>
+            <div class="out3lesson8 border p-3 mb-3">
+
+            </div>
+            <b>Код решения:</b>
+            <pre>
+            <code class="language-js">
+    const out3lesson8 = document.querySelector('.out3lesson8')
+    const btn1lesson8 = document.querySelector('.btn1lesson8')
+    const t1lesson8 = () => {
+        let i = 1
+        while (i <= 50) {
+            out3lesson8.textContent += `${i} `
+            i++
+        }
+    }
+
+    btn1lesson8.onclick = t1lesson8
+            </code>
+        </pre>
+        </div>
+        <div class="task2lesson8">
+            <b>Task 2</b>
+            <p>Кнопка b-2 запускает функцию t2. Функция должна выводить в out-2 строку вида:
+
+                2 4 6 ... 122
+
+                от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла while..</p>
+            <button class="btn2lesson8 btn btn-outline border mb-3">Start</button>
+            <div class="out4lesson8 border p-3 mb-3">
+            </div>
+            <b>Код решения:</b>
+            <pre>
+            <code class="language-js">
+    const out4lesson8 = document.querySelector('.out4lesson8')
+    const btn2lesson8 = document.querySelector('.btn2lesson8')
+    const t2lesson8 = () => {
+        let i = 2
+        while (i <= 122) {
+            out4lesson8.textContent += `${i} `
+            i = i + 2
+        }
+    }
+
+    btn2lesson8.onclick = t2lesson8
+            </code>
+        </pre>
+        </div>
+        <div class="task3lesson8">
+            <b>Task 3</b>
+            <p>Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
+
+                25 24 23 22 . . 7
+
+                от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла while.</p>
+            <button class="btn3lesson8 btn btn-outline border mb-3">Start</button>
+            <div class="out5lesson8 border p-3 mb-3">
+            </div>
+            <b>Код решения:</b>
+            <pre>
+            <code class="language-js">
+    const out5lesson8 = document.querySelector('.out5lesson8')
+    const btn3lesson8 = document.querySelector('.btn3lesson8')
+    const t3lesson8 = () => {
+        let i = 25
+        while (i >= 7) {
+            out5lesson8.textContent += `${i} `
+            i--
+        }
+    }
+
+    btn3lesson8.onclick = t3lesson8
+            </code>
+        </pre>
+        </div>
     </div>
+    <div class="lesson9out"></div>
+
+
+    <!-- imports -->
+
+    <script src="prism.js"></script>
+    <script src="script.js"></script>
 </div>
-
-
-<script src="https://kit.fontawesome.com/0bc74c45ad.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-<script src="prism.js"></script>
-<script src="script.js"></script>
-<script src="js/lesson7.js"></script>
-<script src="js/lesson8.js"></script>
 </body>
 </html>

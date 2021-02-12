@@ -307,7 +307,7 @@ lesson5()
 const lesson5MyExample = () => {
     const out2lesson5 = document.querySelector('.out2lesson5')
     let content = document.querySelector('.out2lesson5').innerHTML
-    let myCodeLesson5 = document.querySelector('.myCodeLesson5')
+    // let myCodeLesson5 = document.querySelector('.myCodeLesson5')
     const cardNumber = document.getElementById('cardNumber')
     const cardNumberPicker = document.querySelector('.cardNumberPicker')
 
@@ -344,6 +344,37 @@ lesson5MyExample()
 
 
 // lesson 6 вложенные циклы
+
+// lesson 7
+
+const a2 = 8;
+
+const t2 = () => {
+    return a2
+}
+
+/*btn2lesson7.onclick = () => {
+    out2lesson7.textContent = t2()
+}*/
+
+// Task 3
+
+const btn3lesson7 = document.querySelector('.btn3lesson7')
+const btn4lesson7 = document.querySelector('.btn4lesson7')
+const out3lesson7 = document.querySelector('.out3lesson7')
+
+const t3 = (a, b) => {
+    return a * b
+}
+
+btn3lesson7.onclick = () => {
+    out3lesson7.textContent = t3(3, 4)
+}
+
+btn4lesson7.onclick = () => {
+    out3lesson7.textContent = t3(5, 6)
+}
+
 
 // Task 1
 // Ниже первое задание с циклами, почему внутри функции происходит лишний оборот цикла
@@ -400,8 +431,122 @@ for (let i = 1; i <= 4; i++) {
     out3lesson6.innerHTML += `<br>`
 }
 
+// Урок 8 while, do while
 
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+}
 
+let k = 0
+
+while (k <= 5) {
+    k++
+    if (k === 3) {
+        break
+    }
+}
+
+//0.......10
+
+let sum = 0
+let p = 0
+
+while (p <= 10) {
+    sum = sum + p;
+    p++
+    console.log(sum)
+}
+
+console.log("sum = " + sum)
+
+// ****
+// ****
+// ****
+
+let out2lesson8 = document.querySelector('.out2lesson8')
+let outStr = ``
+p = 0
+let flag = 3
+
+while (p < 4) {
+    let p1 = 0
+    while (p1 < 4) {
+        if (p1 < flag) {
+            outStr += `0`
+
+        } else {
+            outStr += `*`
+        }
+        p1++
+    }
+    flag--
+    outStr += `<br>`
+    p++
+}
+
+out2lesson8.innerHTML = outStr
+
+// Task 1
+
+/*Кнопка b-1 запускает функцию t1. Функция должна выводить в out-1 строку вида:
+
+    1 2 3 4 5 6 7 8 9 ... 49 50
+
+от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла while.*/
+
+const out3lesson8 = document.querySelector('.out3lesson8')
+const btn1lesson8 = document.querySelector('.btn1lesson8')
+const t1lesson8 = () => {
+    let i = 1
+    while (i <= 50) {
+        out3lesson8.textContent += `${i} `
+        i++
+    }
+}
+
+btn1lesson8.onclick = t1lesson8
+
+// Task 2
+
+/* Кнопка b-2 запускает функцию t2. Функция должна выводить в out-2 строку вида:
+
+2 4 6 ... 122
+
+от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла while. */
+
+const out4lesson8 = document.querySelector('.out4lesson8')
+const btn2lesson8 = document.querySelector('.btn2lesson8')
+const t2lesson8 = () => {
+    let i = 2
+    while (i <= 122) {
+        out4lesson8.textContent += `${i} `
+        i = i + 2
+    }
+}
+
+btn2lesson8.onclick = t2lesson8
+
+// Task 3
+
+/* Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
+
+25 24 23 22 . . 7
+
+от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла while. */
+
+const out5lesson8 = document.querySelector('.out5lesson8')
+const btn3lesson8 = document.querySelector('.btn3lesson8')
+const t3lesson8 = () => {
+    let i = 25
+    while (i >= 7) {
+        out5lesson8.textContent += `${i} `
+        i--
+    }
+}
+
+btn3lesson8.onclick = t3lesson8
+
+// lesson 9
 
 
 
