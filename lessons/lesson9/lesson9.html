@@ -9,32 +9,89 @@
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Lesson 9</title>
     <style>
+        .out-1 {
+            background: #b3d4fc;
+            width: 100px;
+            height: 30px;
+            transition: 0.3s;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
+        .out-1.active {
+            width: 100%;
+            height: 100px;
+        }
+
+        .out-2 {
+           background: #DD4A68;
+            width: 100px;
+            height: 30px;
+            transition: 0.3s;
+
+        }
+
+        .bg-2 {
+            border: 4px solid cornflowerblue;
+        }
+
+        .out-3 {
+            background: darkseagreen;
+            width: 100px;
+            height: 30px;
+            transition: 0.3s;
+        }
+
+        .bg-3 {
+            border: 4px solid cornflowerblue;
+            transition: 0.3s;
+        }
 
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="lesson9">
-        <h1>Урок 9 Работа с дом</h1>
-        <p data="privet" class="one">Test</p>
-        <button class="btn border toggle">Toggle</button>
-        <p>Зачем нужна data? простой пример:</p>
-        <p>Выберите тип бензина:</p>
-        <input type="text" class="gallons">
-        <div>
-            <button class="btn border gas" data="1.2">A-92</button>
-            <button class="btn border gas" data="1.6">A-95</button>
-            <button class="btn border gas" data="2">A-98</button>
-        </div>
-        <b>Стоимость</b>
-        <div class="gas-out">
-
-        </div>
-        <div class="test">
-           Text
-        </div>
+    <h1>Урок 9 Работа с дом</h1>
+    <p data="privet" class="one">Test</p>
+    <button class="btn border toggle">Toggle</button>
+    <p>Зачем нужна data? простой пример:</p>
+    <p>Выберите тип бензина:</p>
+    <input type="text" class="gallons">
+    <div>
+        <button class="btn border gas" data="1.2">A-92</button>
+        <button class="btn border gas" data="1.6">A-95</button>
+        <button class="btn border gas" data="2">A-98</button>
     </div>
+    <b>Стоимость</b>
+    <div class="gas-out mb-3">
+
+    </div>
+    <div class="test mb-3">
+        Text
+    </div>
+    <hr>
+    <div class="out-1 mb-3">
+        Fetch API предоставляет интерфейс JavaScript для работы с запросами и ответами HTTP. Он также предоставляет
+        глобальный метод fetch(), который позволяет легко и логично получать ресурсы по сети асинхронно.
+    </div>
+    <button class="b-1 btn border mb-3">
+        Кнопка b-1
+    </button>
+    <hr>
+    <div class="out-2 mb-3">
+
+    </div>
+    <button class="b-2 btn border mb-3">
+        Кнопка b-2
+    </button>
+    <hr>
+    <div class="out-3 bg-3 mb-3">
+
+    </div>
+    <button class="b-3 btn border mb-3">
+        Кнопка b-3
+    </button>
+
 </div>
 
 <script>
@@ -64,15 +121,6 @@
 
     // пример с бензином
 
-    fetch('https://api.jsonbin.io/b/6026cce587173a3d2f5c3f7b/1')
-        .then((response) => {
-            return response.json();
-        })
-        .then(({gasoline}) => {
-            return gasoline;
-        });
-
-
     const gas = document.querySelectorAll('.gas')
     let gallons = document.querySelector('.gallons')
     const gasOut = document.querySelector('.gas-out')
@@ -99,7 +147,37 @@
 
     // домашка
 
+    // Task 1
 
+    const out1 = document.querySelector('.out-1')
+    const b1 = document.querySelector('.b-1')
+
+    const f1 = () => {
+        out1.classList.toggle('active')
+    }
+
+    b1.onclick = f1
+
+    // Task 2 По нажатию кнопки b-2 запускайте функцию f2, которая присваивает блоку out-2 класс .bg-2.
+
+    const out2 = document.querySelector('.out-2')
+    const b2 = document.querySelector('.b-2')
+
+    const f2 = () => {
+        out2.classList.add('bg-2')
+    }
+
+    b2.onclick = f2
+
+    // Task 3 По нажатию кнопки b-3 запускайте функцию f3, которая удаляет у блока out-3 класс .bg-3
+    const out3 = document.querySelector('.out-3')
+    const b3 = document.querySelector('.b-3')
+
+    const f3 = () => {
+        out3.classList.remove('bg-3')
+    }
+
+    b3.onclick = f3
 
 
 </script>

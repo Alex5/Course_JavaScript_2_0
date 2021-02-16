@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Массивы Часть 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="out-1">
+
+    </div>
+    <div class="out-2">
+
+    </div>
+    <div class="out-3">
+
+    </div>
+    <button class="b-1">
+        b-1
+    </button>
+    <button class="b-2">
+        b-2
+    </button>
+</div>
+
+
+<script>
+
+    /*let a = 'Ivan'
+    let b67 = 43
+    let iiNumber = 2324
+
+    let zodiak = ['kozerog', 1, 1, 19]
+    let men = ['Ivan', 'male', 176, 93, 'Ivanov']
+
+    console.log(zodiak)
+    console.log(men)
+    console.log(men[4])
+
+    men[0] = 'Sergey'
+
+    console.log('Длина массива zodiak', men.length)
+    console.log('Длина массива zodiak', zodiak.length)*/
+
+    let a = [1, 2, 3, 4]
+    console.log(a)
+
+    let t = a[0] //1
+    a[0] = a[a.length - 1] //1 = 4
+    a[a.length - 1] = t //4
+
+    console.log(a)
+    console.log(a[888])
+
+    /*for (let i = 0; i < a.length; i++) {
+        document.querySelector('.out-1').innerHTML += a[i] + '_'           Так нехорошо писать
+    }*/
+
+    let out = ''
+
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] % 2 === 0) {
+            out += a[i] + ' | '
+        }
+    }
+
+    document.querySelector('.out-1').innerHTML = out
+
+    // наибольшое значение в масииве (числа)
+
+    let b = [0, 2, 4, 6, 8, -10]
+    console.log(b)
+
+    let max = b[0]
+
+    for (let i = 0; i < b.length; i++) {
+        if (b[i] > max) {
+            max = b[i]
+        }
+    }
+
+    console.log('max:', max)
+    document.querySelector('.out-1').innerHTML = max
+
+    // сумма чисел
+
+    let sum = 0
+
+    for (let i = 0; i < b.length; i++) {
+        sum = sum + b[i]
+    }
+
+    console.log('sum:', sum)
+    document.querySelector('.out-1').innerHTML = sum
+
+    // Task 1
+    // Создайте массив ar1 содержащий строки, числа, булевы значения.
+    // Выведите его в .out-1. Вывод - по нажатию кнопки b-1
+
+    let ar1 = ['My', 'first', 'array', 2020, true]
+    let out1 = document.querySelector('.out-1')
+
+    const b1 = document.querySelector('.b-1')
+
+    b1.onclick = () => {
+        out1.innerHTML = ar1
+    }
+
+    // task 2
+    // Создайте массив ar2 содержащий строки, числа, булевы значения. Выведите его в div.out-2.
+    // Используйте шаблон вывода из кода в JS. Вывод - по нажатию кнопки b-2.
+
+    let ar2 = ['My', 'second', 'array', 2021, false]
+    let out2 = document.querySelector('.out-2')
+
+    const b2 = document.querySelector('.b-2')
+
+    b1.onclick = () => {
+        out1.innerHTML = ar1
+    }
+
+    // Task 3
+    // Создайте массив ar3, заполните его любыми значениями. Выведите длину массива.
+
+    let ar3 = [234, 'dauhasdf', false ]
+    let out3 = document.querySelector('.out-3')
+
+    out3.innerHTML = ar3.length
+
+</script>
+</body>
+</html>
