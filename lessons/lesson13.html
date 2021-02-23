@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ассоциативный массив (объект) в JavaScript</title>
+
+</head>
+<body>
+
+
+<div class="out"></div>
+<button class="b-1">Push</button>
+<div class="out-1"></div>
+<button class="b-2">Push</button>
+<div class="out-2"></div>
+
+<script>
+
+    let a = {
+        'a': 5,
+        'b': 'Hello',
+        'z2': 'hi',
+        y43: 1999,
+        'villa de': 3040
+    }
+
+    a.yyyy = 555
+
+    a.b = 'uuu'
+    delete a.a
+    console.log(a)
+    console.log(a.b)
+
+    let k = 'y43'
+
+    console.log(a[k])
+
+    // document.querySelector('.out').innerHTML = a
+
+    let out = ''
+
+    for (let key in a) {
+        out += `${key}: ${a[key]}<br>`
+    }
+
+    document.querySelector('.out').innerHTML = out
+
+    // Task 1
+
+    let a1 = {
+        "one": 15,
+        "two": 16,
+        "five": 20
+    };
+
+    const b1 = document.querySelector('.b-1')
+    const out1 = document.querySelector('.out-1')
+
+    const f1 = () => {
+        out1.innerHTML = a1.two
+    }
+
+    b1.onclick = f1
+
+    // Task 2
+
+    let a2 = {
+        "one": "hello",
+        "two": "mahai",
+        "five": "hi"
+    };
+
+    const b2 = document.querySelector('.b-2')
+    const out2 = document.querySelector('.out-2')
+
+    const f2 = () => {
+        for (let key in a2) {
+            if (key = "five") {
+                out2.innerHTML = key
+            }
+        }
+
+    }
+
+    b2.onclick = f2
+
+
+</script>
+</body>
+</html>

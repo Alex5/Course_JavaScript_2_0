@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДВУМЕРНЫЕ МАССИВЫ</title>
+</head>
+<body>
+
+<div class="out">
+</div>
+<div>
+    <p>По нажатию на кнопку сдвигать 1 вперёд</p>
+</div>
+<div class="out2">
+</div>
+
+<div>
+    <button class="b-1-plus">+</button>
+    <button class="b-1-minus">-</button>
+</div>
+<br>
+<div>
+    <p>При нажатии b-1 выполняете функцию f1.
+        Функция должна вывести в out-1 значение 55 из массива a1. Возвратите это значение.
+        let a1 = [12, 43, 23, 3, 55, 67, 98, 14]
+    </p>
+    <button class="b-1">
+        Push
+    </button>
+    <div class="out-1"></div>
+</div>
+
+
+<script>
+
+    let b = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [6, 7, 8]
+    ]
+
+    // for (let i = 0; i < b.length; i++) {
+    //     let c = b[i] // c - массив [1,2,3]
+    //     for (let k = c.length - 1; k >= 0; k--) {
+    //         console.log(c[k])
+    //     }
+    // }
+
+    let out = ''
+
+    // for (let i = 0; i < b.length; i++) { // итерация по длине b три раза
+    //     for (let k = 0; k < b[i].length; k++) {
+    //         out += `${b[i][k]} `
+    //     }
+    //     out += `<br/>`
+    // }
+
+
+    for (let i = 0; i < b.length; i++) { // итерация по длине b три раза
+        for (let k = 0; k < b[i].length; k++) {
+            if (b[i][k] > 4) {
+                out += `${b[i][k]} `
+            }
+        }
+        out += `<br/>`
+    }
+
+    document.querySelector('.out').innerHTML = out
+
+    // не увлекайтесь с циклами. задача по нажатию на кнопку сдвигать единицу
+
+    let d = [1, 0, 0, 0, 0]
+    document.querySelector('.out2').innerHTML = d
+    let k = 0
+
+    document.querySelector('.b-1-plus').onclick = () => {
+        if (k + 1 < 5) {
+            d[k] = 0
+            d[k + 1] = 1
+            k++
+        }
+        document.querySelector('.out2').innerHTML = d
+    }
+
+    document.querySelector('.b-1-minus').onclick = () => {
+        if (k > 0) {
+            d[k] = 0
+            d[k - 1] = 1
+            k--
+        }
+        document.querySelector('.out2').innerHTML = d
+    }
+
+    // Task 1
+
+    /*При нажатии b-1 выполняете функцию f1.
+    Функция должна вывести в out-1 значение 55 из массива a1. Возвратите это значение. */
+
+    let a1 = [12, 43, 23, 3, 55, 67, 98, 14]
+    let b1 = document.querySelector('.b-1')
+    let out1 = document.querySelector('.out-1')
+
+    let f1 = () => {
+        for (let i = 0; i < a1.length; i++) {
+            if (i = 55) {
+                out1.innerHTML = i
+            }
+        }
+    }
+
+    b1.onclick = f1
+
+
+</script>
+</body>
+</html>

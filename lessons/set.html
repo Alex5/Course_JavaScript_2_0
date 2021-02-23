@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SET В JAVASCRIPT</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div>
+    <p>Task 2
+        При нажатии b-2 выполняете функцию f2. Функция должна добавить в набор s2 элементы, которые пользователь вводит
+        в i-2. Функция должна выводить в консоль s2 после каждого добавления элемента.</p>
+    <input type="text" class="i-2">
+    <button class="b-2">Push</button>
+</div>
+<hr>
+<div>
+    <p>
+        Task 3
+        При нажатии b-3 выполняете функцию f3. Функция должна удалить из набора s3 строку, которую пользователь вводит в
+        i-3. Функция должна выводить в консоль s3 после каждого удаления элемента.
+    </p>
+    <input type="text" class="i-3">
+    <button class="b-3">Push</button>
+    <button class="b-4">Delete</button>
+</div>
+
+
+<script>
+    const a = new Set()
+    a.add(1)
+    a.add(2)
+    a.add('Hello')
+    a.delete(1)
+
+
+    console.log(a)
+    console.log(a[0]) // отличие set
+    console.log(a.size)
+    console.log(a.has('Hello'))
+    console.log(a.has('Hi!'))
+
+    for (let i of a) {
+        console.log(i)
+    }
+
+    // Как применять set?
+
+    const b = [1, 2, 1, 3, 4, 5, 5, 'Hi', 'Hello', 2, 'Hi']
+
+    const bArr = Array.from(new Set(b))
+    console.log(bArr)
+
+    // соответсвенно в выводе мы получили только уникальные значения
+    // ну и можем привести это всё дело к обычному массиву
+
+    const newArr = Array.from(bArr)
+    console.log(newArr)
+
+    // и можно ещё опместить set в Array.from()
+
+    console.log(Array.from(new Set(b)))
+
+    // Task 1 Создайте set s1. Добавьте в него три элемента 'h', 'b', 'o', 'h'.
+    // Добавление делайте через add. Выведите в консоль получившийся набор (set) s1
+
+    const s1 = new Set()
+    s1.add('h')
+    s1.add('b')
+    s1.add('o')
+    s1.add('h')
+    console.log(s1)
+
+    // Task 2 При нажатии b-2 выполняете функцию f2. Функция должна добавить
+    // в набор s2 элементы, которые пользователь вводит в i-2.
+    // Функция должна выводить в консоль s2 после каждого добавления элемента.
+
+    const b2 = document.querySelector('.b-2')
+    const i2 = document.querySelector('.i-2')
+
+    const s2 = new Set()
+
+    const f2 = () => {
+        if (i2.value === '') {
+            alert('Пустое поле')
+        } else {
+            console.log(s2.add(i2.value))
+            i2.value = ''
+        }
+    }
+
+    b2.onclick = f2
+
+    // Task 3 При нажатии b-3 выполняете функцию f3. Функция должна удалить из набора s3 строку,
+    // которую пользователь вводит в i-3. Функция должна выводить в консоль s3 после каждого удаления элемента.
+
+    const b3 = document.querySelector('.b-3')
+    const b4 = document.querySelector('.b-4')
+    const i3 = document.querySelector('.i-3')
+
+    const s3 = new Set()
+
+    const f3 = () => {
+        if (i3.value === '') {
+            alert('Пустое поле')
+        } else {
+            console.log(s3.add(i3.value))
+            i3.value = ''
+        }
+    }
+
+    const f4 = () => {
+        for (const elem of s3) {
+            if (s3.has(elem)) {
+               console.log(s3.delete(elem)) ;
+            }
+        }
+        console.log(s3)
+    }
+
+    b3.onclick = f3
+    b4.onclick = f4
+
+
+</script>
+</body>
+</html>

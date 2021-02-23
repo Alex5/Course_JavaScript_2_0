@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>МЕТОДЫ МАССИВОВ: JOIN, SPLIT, FOREACH</title>
+</head>
+<body>
+
+
+<script>
+    // split
+    const a = 'Hello, i`m, 2021'
+    console.log(a.split(','))
+
+    // join
+    const elements = ['Fire', 'Air', 'Water'];
+    console.log(elements.join(' '))
+
+    // foreach
+
+    let array1 = ['a', 'b', 'c']
+    array1.forEach((elem, ) => {
+        console.log(elem)
+    })
+
+    let array2 = [9, 8, 7]
+    array2.forEach((elem, index) => {
+        elem = elem * 2
+        console.log(index)
+        console.log(elem)
+        console.log('---')
+    })
+
+    console.log(array2)
+
+    // Task 1
+
+    // Дан массив a1 = [4,5,6,7,12,34,56,78,90,11] - с помощью forEach переберите массив и создайте новый массив
+    // a1_res куда добавьте элементы данного массива умноженные на 2. Действия должны запускаться при
+    // вызове функции t1.
+
+    const a1 = [4,5,6,7,12,34,56,78,90,11]
+
+    const t1 = () => {
+        a1.forEach(elem => {
+            let a1_res = elem * 2
+            console.log(a1_res)
+        })
+    }
+
+    t1()
+
+    // Task 2
+
+    // Дан массив a1 = [2,3,4,5,10,11,12] - с помощью forEach переберите массив и создайте новый массив a2_res
+    // куда добавьте элементы данного массива деленные на 2. Действия должны запускаться при вызове
+    // функции t2.
+
+    const a2 = [2,3,4,5,10,11,12]
+
+    const t2 = () => {
+        a2.forEach(elem => {
+            let a2_res = elem % 2
+            console.log(a2_res)
+        })
+    }
+
+    t2()
+
+    // Task 3
+
+    // Дан массив a3 = [2, "hello", 3, "hi", 4, "Mazai"] - с помощью forEach переберите массив и создайте новый
+    // массив a3_res куда добавьте элементы данного массива являющиеся числом. Запускаться решение
+    // должно при вызове функции t3.
+
+    const a3 = [2, "hello", 3, "hi", 4, "Mazai"]
+
+    a3.forEach(elem => {
+        if (typeof elem === 'number') {
+            let a3_res = elem
+            console.log(a3_res)
+        }
+    })
+
+</script>
+</body>
+</html>

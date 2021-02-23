@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>МЕТОДЫ МАССИВОВ: MAP, FILTER ( ЧАСТЬ 1)</title>
+</head>
+<body>
+
+
+<script>
+    const a = [1, 2, 3, 'Hello', 5, 6, 'Dima', 'Alex', true]
+    const b = a.map((item, index) => {
+        console.log(item, index)
+        return item * 5;
+    })
+
+    const c = a.filter((item, index) => {
+        if (typeof item === 'string') {
+            return item
+        }
+    })
+
+    console.log(b)
+    console.log(c)
+
+    // Task 1 Дан массив a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11] - с помощью map переберите
+    // массив и создайте новый массив a1_res куда добавьте элементы данного массива умноженные на 2.
+    // Возвратите массив a1_res.
+
+    const a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11]
+
+    const a1_res = a1.map((item) => {
+        return item * 2
+    })
+
+    console.log(a1_res)
+
+    // Task 2 Дан массив a2 = [2,3,4,5,10,11,12] - с помощью map переберите массив и создайте массив a2_res куда
+    // добавьте элементы данного массива возведенные во вторую степень. Возвратите массив a2_res. Действия
+    // должны запускаться при вызове функции t2.
+
+    const a2 = [2, 3, 4, 5, 10, 11, 12]
+
+    const t2 = () => {
+        const a2_res = a2.map((item) => {
+            return Math.pow(item, 2)
+        })
+        console.log(a2_res)
+    }
+
+    t2()
+
+    // Task 3 Дан массив a3 = [4,"3",6,7,"12",34,"56",78,90,11] - с помощью map переберите массив и создайте массив a3_res
+    // куда добавьте все элементы приведенные к числу. Возвратите a3_res. Действия должны запускаться при
+    // вызове функции t3.
+
+    const a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11]
+
+
+    const t3 = () => {
+        const a3_res = a3.map(item => {
+            return item
+
+        })
+        console.log('До фильтрации:', a3_res)
+        let a3_resFiltered = a3_res.filter(item => {
+            if (typeof item === 'number') {
+                return item
+            }
+        })
+        console.log('После фильтрации:', a3_resFiltered)
+    }
+
+    t3()
+
+</script>
+</body>
+</html>

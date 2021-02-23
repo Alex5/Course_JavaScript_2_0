@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Массивы</title>
+
+</head>
+<body>
+<button class="b-1">Push</button>
+<button class="b-2">Pop</button>
+<button class="b-3">Shift</button>
+<input type="text" class="i-1">
+<p>Вывод 1</p>
+<div class="out-1">
+</div>
+<p>Вывод 2</p>
+<div class="out-2">
+</div>
+<p>Вывод 3</p>
+<div class="out-3">
+</div>
+
+<script>
+    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let b = ['a', 'b', 'c', 'd', 'e', 'f']
+
+    console.log(a.length)
+    console.log(a.push(10, 13, 21, 45, 65))
+    console.log(a)
+
+    b.push('g', 'h')
+    console.log(b)
+
+    console.log(b.pop())
+    console.log(b.pop())
+
+    console.log(b)
+
+    // удалить элемент внутри массива
+
+    delete a[3]
+    console.log(a)
+
+    a.splice(3, 4, 'hi')
+    console.log(a)
+
+    // shift / unshift - удаляет первый элемент / удаляет последний элемент
+
+    //task 1
+
+    /*Task 1
+
+    Есть массив d1, кнопка b-1, input i-1. Напишите функцию f1,
+    которая при нажатии читает i-1 и добавляем его в массив.
+    После чего выводит массив в .out-1. Поскольку мы будем выводить массив d1 неоднократно,
+    то давайте вывод массива сделаем отдельной функцией, showArr - она подготовлена.
+    Изучите ее - это хороший способ оптимизировать код.*/
+
+    const d1 = [33, 'best', 66, 'best'];
+    const b1 = document.querySelector('.b-1')
+    const b2 = document.querySelector('.b-2')
+    const b3 = document.querySelector('.b-3')
+    const i1 = document.querySelector('.i-1')
+    const out1 = document.querySelector('.out-1')
+    const out2 = document.querySelector('.out-2')
+    const out3 = document.querySelector('.out-3')
+
+    const showArr = (result2, result3) => {
+        out1.innerHTML = d1
+        out2.innerHTML = result2
+        out3.innerHTML = result3
+    }
+
+    const f1 = () => {
+        d1.push(i1.value)
+        showArr()
+    }
+
+    b1.onclick = f1
+
+    // Task 2
+
+    /* Напишите функцию f2, которая применяет метод pop к массиву d1, а затем выводит его (showArr) в .out-2 */
+
+    const f2 = () => {
+        let result2 = d1.pop()
+        showArr(result2)
+        console.log(out2.value)
+    }
+
+    b2.onclick = f2
+
+    // Task 3 Напишите функцию f3,
+    // которая применяет метод shift к массиву d1, а затем выводит его (showArr) в .out-3
+
+    const f3 = () => {
+        let result3 = d1.shift()
+        showArr(result3)
+    }
+
+    b3.onclick = f3
+
+
+</script>
+</body>
+</html>
