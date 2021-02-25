@@ -4,7 +4,99 @@
     <meta charset="UTF-8">
     <title>СОБЫТИЯ МЫШИ В JAVASCRIPT</title>
 </head>
+<style>
+    * {
+        color: white;
+        font-family: Roboto, sans-serif;
+    }
+
+    div {
+        padding: 15px;
+        background: #3c5876;
+        width: 500px;
+    }
+</style>
 <body>
 
+<div class="div-1"><p>Task 1
+
+    Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и
+    выводить на экран содержимое блока (только текст). Вывод осуществляется в out-1.</p></div>
+<div class="out-1"></div>
+<hr>
+<div class="div-2"><p>Task 2
+
+    Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна возвращать true или false в
+    зависимости от того, нажата ли клавиша alt или нет в момент клика. Также, выводите на экран результат. Вывод
+    осуществляется в out-2.</p></div>
+<div class="out-2"></div>
+<hr>
+<div class="div-3"><p>Task 3
+    Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px. Каждый клик - увеличение ширины
+    на 5px. 10 кликов - на 50px. Ширину выводите в out-3.</p></div>
+<div class="out-3"></div>
+
+<script>
+    // Task 1
+
+    // Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и
+    // выводить на экран содержимое блока (только текст). Вывод осуществляется в out-1.
+
+    const div1 = document.querySelector('.div-1')
+    const out1 = document.querySelector('.out-1')
+
+    const t1 = (e) => {
+        let divText = e.path[1].innerText
+        out1.innerHTML = divText
+        return divText
+    }
+
+    div1.onclick = t1
+
+    // Task 2
+
+    // Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна возвращать true или
+    // false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также, выводите на экран
+    // результат. Вывод осуществляется в out-2.
+
+    const div2 = document.querySelector('.div-2')
+    const out2 = document.querySelector('.out-2')
+
+    const t2 = (e) => {
+        if (e.altKey === false) {
+            out2.innerHTML = false
+            return false;
+        } else {
+            out2.innerHTML = true
+            return true
+        }
+    }
+
+    div2.onclick = t2
+
+    // Task 3
+
+    // Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px. Каждый клик
+    // увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3.
+
+    const div3 = document.querySelector('.div-3')
+    let newWidth = 501
+    let click = 0
+
+    const t3 = () => {
+        click++
+        div3.style.width = newWidth + 'px'
+        if (click >= 10) {
+            newWidth = newWidth + 50
+        }
+        else {
+            newWidth++
+        }
+    }
+
+    div3.onclick = t3
+
+
+</script>
 </body>
 </html>

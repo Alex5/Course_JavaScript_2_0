@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>СОБЫТИЯ КЛАВИАТУРЫ В JAVASCRIPT</title>
+</head>
+<body>
+
+
+<input type="text" class="i-1">
+<div class="out-1"></div>
+<script>
+    // Task 1
+
+    // Дан input .i-1. Напишите функцию t1, которая выводит в .out-1 символ и возвращает его. Во всех
+    // последующих задачах - работаем с латиницей и цифрами.
+
+    const i1 = document.querySelector('.i-1')
+    const out1 = document.querySelector('.out-1')
+
+
+
+    const t1 = (e) => {
+        if (e.inputType === 'deleteContentBackward') {
+            const text = out1.textContent.split(',')
+            text.pop()
+            out1.innerHTML = text.join()
+        } else {
+            out1.innerHTML += e.data + ','
+        }
+    }
+
+    document.onkeydown = (e) => {
+        console.log(e)
+        if (e.code === 'Backspace') {
+
+        }
+    }
+
+    i1.oninput = t1
+
+</script>
+</body>
+</html>
