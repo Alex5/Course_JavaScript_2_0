@@ -1,6 +1,8 @@
+# Course_JavaScript_2_0
+
 Изучаем технологии:	JavaScript, Циклы, Массивы, DOM, Object, Touch, API, AJAX,
 
 Курс по js от Александр Лущенко, по ссылке вся пройденная мной инфа с живыми примерами
 
-# Course_JavaScript_2_0
+
 
