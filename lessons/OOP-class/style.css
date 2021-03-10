@@ -1,0 +1,19 @@
+.red {
+    background-color: indianred;
+    padding: 14px;
+    color: white;
+    font-weight: 700;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.yellow {
+    background-color: yellow;
+    padding: 14px;
+    color: white;
+    font-weight: 700;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
