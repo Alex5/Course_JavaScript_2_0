@@ -1,11 +1,27 @@
+*{
+    font-family: Roboto, sans-serif;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .red {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: indianred;
     padding: 14px;
     color: white;
-    font-weight: 700;
-    width: 200px;
+    width: auto;
     text-align: center;
     border-radius: 10px;
+}
+
+.red span {
+    margin-left: 15px;
 }
 
 .yellow {
@@ -16,4 +32,16 @@
     width: 200px;
     text-align: center;
     border-radius: 10px;
+}
+
+.goods {
+    display: flex;
+}
+
+.card {
+    background: lightgray;
+    border: 1px solid slategray;
+    padding: 20px;
+    width: auto;
+    border-radius: 15px;
 }

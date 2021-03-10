@@ -5,32 +5,38 @@
 //
 // myAlert('HI', 'red', '.test')
 
-class Alert {
-    constructor(message, cssClass, className) {
-        this.message = message
-        this.cssClass = cssClass
-        this.className = className
-    }
-
-    showAlert() {
-        let out = document.querySelector(`${this.className}`)
-        out.innerHTML = `<p class=${this.cssClass}>${this.message}</p>`
-    }
-}
-
-class Alert2 extends Alert {
-    constructor(message, cssClass, className, icon) {
-        super(message, cssClass, className)
-        this.icon = icon // new proper
-    }
-    showIconAlert(){
-        let out = document.querySelector(`${this.className}`)
-        out.innerHTML = `<p class=${this.cssClass}>${this.message}</p>`
-    }
-}
-
 let m = new Alert('WARNING', 'red', '.test')
 
 m.showAlert()
 
-let m2 = new Alert2('драстье', 'red', '.test2')
+let m2 = new AlertIcon('Ошибка отправки запроса', 'red', '.test', 'error')
+
+m2.showIconAlert()
+
+// Task 1,2,3
+
+const showItem = new Goods(
+    'https://pngicon.ru/file/uploads/korova.png',
+    '26000р',
+    'Корова')
+
+const showItemWithCount = new GoodsCount(
+    'https://pngicon.ru/file/uploads/korova.png',
+    '26000р',
+    'Хорошая корова',
+    '1200 шт.'
+)
+
+showItem.draw()
+
+showItemWithCount.addCount()
+
+
+
+
+
+
+
+
+
+
