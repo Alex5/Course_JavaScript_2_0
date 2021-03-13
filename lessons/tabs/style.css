@@ -1,0 +1,36 @@
+.tabs-header {
+    display: flex;
+    padding: 15px;
+    background-color: lightgray;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab {
+    margin-top: 15px;
+}
+
+.tab-link {
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.3s;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.tab-link.active {
+    background: #DD4A68;
+    padding: 15px;
+    color: white;
+    border-radius: 15px;
+}
+
+.tab.active {
+    flex-direction: row;
+}
+
+.tab-content {
+
+    flex-direction: column;
+
+}
