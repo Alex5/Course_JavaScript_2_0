@@ -1,0 +1,19 @@
+* {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: lightcoral;
+}
+
+#timer {
+    display: none;
+}
